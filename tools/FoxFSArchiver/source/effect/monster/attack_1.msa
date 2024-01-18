@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\Monster\Monster_0016\attack_1.GR2"
+MotionDuration           3.166667
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.760264
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Group001"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster/skeleton_god_24_1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

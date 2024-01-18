@@ -1,0 +1,30 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechito_christmas2021\plechi_ch2021_stone1\spawn.GR2"
+MotionDuration           0.500000
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.285547
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/stone1_spawn.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      2
+        StartingTime         0.000000
+        
+        DuringTime           0.300000
+        Power                120
+        AffectingRange       2500
+    }
+}

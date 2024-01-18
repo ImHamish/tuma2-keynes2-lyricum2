@@ -1,0 +1,64 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/ymir work/monster/ridack_mommyboss/21.gr2"
+MotionDuration           2.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.000000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    ""
+        FollowingEnable      1
+        EffectFileName       "D:/ymir work/monster/ridack_mommyboss/ridack_skill.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+		Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.300000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    ""
+        FollowingEnable      1
+        EffectFileName       "D:/ymir work/monster/ridack_mommyboss/ridack_skill2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+		Group Event02
+    {
+        MotionEventType      2
+        StartingTime         1.470000
+        
+        DuringTime           0.300000
+        Power                700
+        AffectingRange       5000
+    }
+	    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         1.470000
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           550.000000
+            Position         0.000000 0.000000 100.000000
+        }
+    }
+}

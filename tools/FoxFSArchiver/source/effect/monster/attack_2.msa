@@ -1,0 +1,19 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\Monster\Monster_0033\attack_2.GR2"
+MotionDuration           2.800000
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      6
+        StartingTime         1.443841
+        
+        AttachingEnable      1
+        AttachingBoneName    "bip001-head"
+        FlyFileName       "d:/ymir work/effect/monster/bou_20_1_throw.msf"
+        FlyPosition       0.000000 0.000000 0.000000
+    }
+}

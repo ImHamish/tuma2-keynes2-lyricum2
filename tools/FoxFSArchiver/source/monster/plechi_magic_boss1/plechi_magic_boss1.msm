@@ -1,0 +1,98 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\ymir work\monster\plechi_magic_boss1\plechi_magic_boss1.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 0
+}
+Group AttachingData
+{
+    AttachingDataCount       5
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Root"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           101.000000
+            Position         50.000000 0.000000 50.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01Tail"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           88.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Root"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           101.000000
+            Position         0.000000 0.000000 80.000000
+        }
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Root"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           81.000000
+            Position         0.000000 0.000000 250.000000
+        }
+    }
+    
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01Tail7"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\magic_boss1_taileff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

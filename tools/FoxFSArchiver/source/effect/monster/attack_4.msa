@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\Monster\Monster_0076\attack_4.GR2"
+MotionDuration           2.633333
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.478845
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "head_bone_01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster/chuheun_20.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

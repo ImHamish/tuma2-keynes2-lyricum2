@@ -1,0 +1,33 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\plechito_halloween2021\plechi_h2021_boss2\spawn.GR2"
+MotionDuration           6.833333
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.300000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/halloween2021/boss2_spawn2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         5.350000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/halloween2021/boss2_spawn.mse"
+        EffectPosition       0.000000 0.000000 250.000000
+    }
+}

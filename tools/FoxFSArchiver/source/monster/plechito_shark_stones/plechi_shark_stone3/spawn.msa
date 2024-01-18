@@ -1,0 +1,33 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechito_shark_stones\plechi_shark_stone3\spawn.GR2"
+MotionDuration           1.166667
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.10000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "plechi_desert_stone01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/shark_stone3_spawn.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.10000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "plechi_desert_stone01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/shark_stone1_spawn.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

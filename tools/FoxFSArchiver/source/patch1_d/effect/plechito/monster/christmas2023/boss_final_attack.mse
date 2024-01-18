@@ -1,0 +1,56 @@
+BoundingSphereRadius   800.000000
+BoundingSpherePosition 0.000000 -450.000000 500.000000
+
+Group Mesh
+{
+    StartTime           0.000000
+    List TimeEventPosition
+    {
+        0.000000 "MOVING_TYPE_DIRECT" 0.000000 0.000000 0.000000
+    }
+    
+    MeshFileName               	"boss_final_attack.mde"
+    MeshAnimationLoopEnable    	0
+    MeshAnimationLoopCount     	0
+    MeshAnimationFrameDelay    	0.010000
+    
+    MeshElementCount           	2
+    Group MeshElement00
+    {
+        BillboardType              	0
+        BlendingEnable             	1
+        BlendingSrcType            	5
+        BlendingDestType           	2
+        
+        TextureAnimationLoopEnable 	1
+        TextureAnimationFrameDelay 	0.020000
+        TextureAnimationStartFrame 	0
+        
+        ColorOperationType         	5
+        ColorFactor                	0.133333 0.525490 0.792157 1.000000
+        List TimeEventAlpha
+        {
+            0.000000 1.000000
+            0.150000 0.000000
+        }
+    }
+    Group MeshElement01
+    {
+        BillboardType              	0
+        BlendingEnable             	1
+        BlendingSrcType            	5
+        BlendingDestType           	2
+        
+        TextureAnimationLoopEnable 	1
+        TextureAnimationFrameDelay 	0.020000
+        TextureAnimationStartFrame 	0
+        
+        ColorOperationType         	5
+        ColorFactor                	0.133333 0.525490 0.792157 1.000000
+        List TimeEventAlpha
+        {
+            0.000000 1.000000
+            0.150000 0.000000
+        }
+    }
+}

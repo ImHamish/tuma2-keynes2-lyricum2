@@ -1,0 +1,31 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/ymir work/monster/ridack_hallowmob/20.gr2"
+MotionDuration           2.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         1.200000
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           100.000000
+            Position         00.000000 -70.000000 80.000000
+        }
+    }
+}

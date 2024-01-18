@@ -285,7 +285,6 @@ def genMain(oSub={}, szParentName=[]):
 			SymLinkCreateDir("%sshare/data" % (gCPR), "%s/data" % (szTmpParentName))
 			SymLinkCreateDir("%sshare/locale" % (gCPR), "%s/locale" % (szTmpParentName))
 			SymLinkCreateDir("%sshare/package" % (gCPR), "%s/package" % (szTmpParentName))
-			SymLinkCreateDir("%sshare/panama" % (gCPR), "%s/panama" % (szTmpParentName))
 			#files sym paths
 			SymLinkCreateFile("%sshare/conf/CMD" % (gCPR), "%s/CMD" % (szTmpParentName))
 			SymLinkCreateFile("%sshare/conf/CRC" % (gCPR), "%s/CRC" % (szTmpParentName))

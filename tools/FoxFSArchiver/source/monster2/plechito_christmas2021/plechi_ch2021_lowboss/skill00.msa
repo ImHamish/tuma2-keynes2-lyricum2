@@ -1,0 +1,85 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\plechito_christmas2021\plechi_ch2021_lowboss\skill00.GR2"
+MotionDuration           2.800000
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_low_prepare.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.90000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_low_jump.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.690000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_low_blow.mse"
+        EffectPosition       0.000000 -500.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      2
+        StartingTime         0.90000
+        
+        DuringTime           0.100000
+        Power                40
+        AffectingRange       4200
+    }
+    Group Event04
+    {
+        MotionEventType      2
+        StartingTime         1.690000
+        
+        DuringTime           0.300000
+        Power                100
+        AffectingRange       7200
+    }
+    Group Event05
+    {
+        MotionEventType      4
+        StartingTime         1.690000
+        DuringTime          0.400000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        3
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           750.000000
+            Position         0.000000 -350.000000 0.000000
+        }
+    }
+}

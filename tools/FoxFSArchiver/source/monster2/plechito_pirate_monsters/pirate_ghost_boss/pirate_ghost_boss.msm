@@ -1,0 +1,228 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\ymir work\monster2\plechito_pirate_monsters\pirate_ghost_boss\pirate_ghost_boss.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 0
+}
+Group AttachingData
+{
+    AttachingDataCount       15
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           166.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Main_Root"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           100.000000
+            Position         0.000000 0.000000 80.000000
+        }
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           245.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Main_Root"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           90.000000
+            Position         0.000000 0.000000 80.000000
+        }
+    }
+    
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone05"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_ghosteff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData05
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone11(mirrored)"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_ghosteff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData06
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone11"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_ghosteff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData07
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        EffectScriptName     ""
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData08
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone05(mirrored)"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_ghosteff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData09
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone08(mirrored)"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_ghosteff2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData10
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone08"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_ghosteff2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData11
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone57"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_ghosteff2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData12
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone02"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_bottomeff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData13
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "effect1"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_goldteff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData14
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "effect2"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\pirates\ghost_boss_goldteff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

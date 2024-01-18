@@ -1,0 +1,124 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_v2018_boss\skill00.GR2"
+MotionDuration           3.633333
+
+Group MotionEventData
+{
+    MotionEventDataCount     9
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.187689
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bone079"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/v2018_boss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.237689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/v2018_boss_skill00b.mse"
+        EffectPosition       300.000000 -550.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.437689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/v2018_boss_skill00b.mse"
+        EffectPosition       150.000000 -550.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         1.637689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/v2018_boss_skill00b.mse"
+        EffectPosition       0.000000 -550.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         1.837689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/v2018_boss_skill00b.mse"
+        EffectPosition       -150.000000 -550.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         2.037689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/v2018_boss_skill00b.mse"
+        EffectPosition       -300.000000 -550.000000 0.000000
+    }
+   Group Event06
+    {
+        MotionEventType      2
+        StartingTime         1.187039
+        
+        DuringTime           0.900000
+        Power                300
+        AffectingRange       600
+    }
+    Group Event07
+    {
+        MotionEventType      4
+        StartingTime         1.470397
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         0.000000 -100.000000 0.000000
+        }
+    }
+    Group Event08
+    {
+        MotionEventType      1
+        StartingTime         0.000000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bone052"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/v2018_boss_skill00c.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

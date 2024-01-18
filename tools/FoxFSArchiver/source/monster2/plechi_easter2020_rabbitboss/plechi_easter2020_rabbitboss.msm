@@ -1,0 +1,111 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\ymir work\monster2\plechi_easter2020_rabbitboss\plechi_easter2020_rabbitboss.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 0
+}
+Group AttachingData
+{
+    AttachingDataCount       6
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "R_footStrike_ex"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           140.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "L_footStrike_ex"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           138.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Spine"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           183.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "EffectsSocket"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           155.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "weapon_eff"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\easter2020_boss_wpeff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData05
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "shield_eff"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\easter2020_boss_sheff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

@@ -1,0 +1,31 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\plechito_pirate_monsters\pirate_monster6\attack00.GR2"
+MotionDuration           1.333333
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      6
+        StartingTime         0.589303
+        
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 R Hand"
+        FlyFileName       "d:/ymir work/effect/plechito/monster/pirates/monster6_flyattack.msf"
+        FlyPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.575571
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/pirates/monster6_attack_boom.mse"
+        EffectPosition       0.000000 -100.000000 150.000000
+    }
+}

@@ -1,0 +1,235 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\plechito_christmas2021\plechi_ch2021_mainboss\skill00.GR2"
+MotionDuration           2.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     16
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_prepare.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.65000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_jump.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_damagearea.mse"
+        EffectPosition       0.000000 -600.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_damagearea.mse"
+        EffectPosition       700.000000 -700.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_damagearea.mse"
+        EffectPosition       -700.000000 -700.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_damagearea.mse"
+        EffectPosition       0.000000 -1500.000000 0.000000
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         1.42000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_giftsplash.mse"
+        EffectPosition       0.000000 -600.000000 0.000000
+    }
+    Group Event07
+    {
+        MotionEventType      1
+        StartingTime         1.42000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_giftsplash.mse"
+        EffectPosition       700.000000 -700.000000 0.000000
+    }
+    Group Event08
+    {
+        MotionEventType      1
+        StartingTime         1.42000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_giftsplash.mse"
+        EffectPosition       -700.000000 -700.000000 0.000000
+    }
+    Group Event09
+    {
+        MotionEventType      1
+        StartingTime         1.42000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2021/boss_main_skill00_giftsplash.mse"
+        EffectPosition       0.000000 -1500.000000 0.000000
+    }
+    Group Event10
+    {
+        MotionEventType      2
+        StartingTime         0.650000
+        
+        DuringTime           0.100000
+        Power                40
+        AffectingRange       4200
+    }
+    Group Event11
+    {
+        MotionEventType      2
+        StartingTime         1.420000
+        
+        DuringTime           0.300000
+        Power                100
+        AffectingRange       7200
+    }
+    Group Event12
+    {
+        MotionEventType      4
+        StartingTime         1.420000
+        DuringTime          0.400000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        3
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           450.000000
+            Position         0.000000 -600.000000 0.000000
+        }
+    }
+    Group Event13
+    {
+        MotionEventType      4
+        StartingTime         1.420000
+        DuringTime          0.400000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        3
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           450.000000
+            Position         700.000000 -700.000000 0.000000
+        }
+    }
+    Group Event14
+    {
+        MotionEventType      4
+        StartingTime         1.420000
+        DuringTime          0.400000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        3
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           450.000000
+            Position         -700.000000 -700.000000 0.000000
+        }
+    }
+    Group Event15
+    {
+        MotionEventType      4
+        StartingTime         1.420000
+        DuringTime          0.400000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        3
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           600.000000
+            Position         0.000000 -1500.000000 0.000000
+        }
+    }
+}

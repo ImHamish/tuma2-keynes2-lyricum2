@@ -1,0 +1,62 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\ymir work\monster\plechito_halloween2022\plechi_hall2022_stone1_half\plechi_hall2022_stone1_half.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 0
+}
+Group AttachingData
+{
+    AttachingDataCount       3
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "plechito_halloween2022_stone"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           80.000000
+            Position         -30.000000 0.000000 80.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "plechito_halloween2022_stone"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           90.000000
+            Position         -30.000000 0.000000 80.000000
+        }
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "plechito_halloween2022_stone"
+        
+        EffectScriptName     "D:\ymir work\effect\plechito\monster\halloween2022\stone1_half_loop.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}
