@@ -1,0 +1,11 @@
+# Do ignore: Types
+*.exe
+*.txt
+*.cfg
+*.wa
+*.inf
+
+# Do not ignore: Files
+!config.exe
+!CrashSender.exe
+!CrashSenderd.exe

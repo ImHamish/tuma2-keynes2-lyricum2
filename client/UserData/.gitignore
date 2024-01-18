@@ -1,0 +1,6 @@
+# Do ignore: All
+*
+!.gitignore
+
+# Do not ignore: Folders
+!chatting/

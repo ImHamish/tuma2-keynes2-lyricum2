@@ -1,0 +1,5 @@
+# Do ignore: All
+*
+!.gitignore
+!*.png
+!*.jpg
