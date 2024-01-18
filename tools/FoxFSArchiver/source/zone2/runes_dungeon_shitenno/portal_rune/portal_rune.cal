@@ -1,0 +1,17 @@
+// *portal_rune*
+
+// ==========================================================================================
+// normal state 
+// ==========================================================================================
+
+// ---------- idle animations ----------
+Nidle_001						 = npc\level_object\Portal\portal_rune_Nidle_001_loop.caf
+Xidle_001						 = npc\level_object\Portal\portal_rune_Nidle_001_loop.caf
+Fidle_001						 = npc\level_object\Portal\portal_rune_Nidle_001_loop.caf
+
+
+
+
+
+
+
