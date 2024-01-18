@@ -40,17 +40,17 @@ if ! hash gmake 2>/dev/null; then
 	exit 1;
 fi
 
-build_dir="build"
-if ! [ -d $build_dir ]; then
-	mkdir $build_dir
-fi
-
-#if [ -d $build_dir ]; then
-#	rm -r $build_dir
-#	mkdir $build_dir
-#else
+#build_dir="build"
+#if ! [ -d $build_dir ]; then
 #	mkdir $build_dir
 #fi
+
+if [ -d $build_dir ]; then
+	rm -r $build_dir
+	mkdir $build_dir
+else
+	mkdir $build_dir
+fi
 
 [ -z "$CPUS" ] && CPUS=`getconf NPROCESSORS_ONLN`
 
