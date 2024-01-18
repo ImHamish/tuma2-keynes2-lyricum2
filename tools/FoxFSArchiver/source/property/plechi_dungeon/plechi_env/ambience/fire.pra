@@ -1,0 +1,9 @@
+YPRT
+974526747
+ambiencesoundvector		"sound/plechito/environment/fire.wav"
+maxvolumeareapercentage		"0.090000"
+playinterval		"0.000000"
+playintervalvariation		"0.000000"
+playtype		"LOOP"
+propertyname		"fire"
+propertytype		"Ambience"

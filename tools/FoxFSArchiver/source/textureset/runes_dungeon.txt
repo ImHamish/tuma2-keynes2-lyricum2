@@ -1,0 +1,94 @@
+TextureSet
+
+TextureCount 9
+
+Start Texture001
+    "d:\ymir work\terrainmaps\common_terrain_dst\texture2d\sand_dst_04_diff.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture001
+Start Texture002
+    "d:\ymir work\terrainmaps\mtthunder\mtthunder_field03.dds"
+    8.000000
+    8.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture002
+Start Texture003
+    "d:\ymir work\zone\solar_temple\ex01_solartemple_obj\texture2d\rock_deserto_esterno.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture003
+Start Texture004
+    "d:\ymir work\terrainmaps\common_terrain_dst\texture2d\sand_dst_05_diff.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture004
+Start Texture005
+    "d:\ymir work\zone\runes_dungeon_shitenno\underpass\bu_underpass_011.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture005
+Start Texture006
+    "d:\ymir work\zone\runes_dungeon_shitenno\underpass\bu_underpass_020.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture006
+Start Texture007
+    "d:\ymir work\zone\runes_dungeon_shitenno\underpass\bu_underpass_decal_001a.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture007
+Start Texture008
+    "d:\ymir work\zone\runes_dungeon_shitenno\underpass\bu_underpass_011_runes.dds"
+    6.000000
+    6.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture008
+Start Texture009
+    "d:\ymir work\zone\runes_dungeon_shitenno\underpass\bu_underpass_011_runes_horizontal.dds"
+    6.000000
+    6.000000
+    0.000000
+    0.621469
+    1
+    0
+    0
+End Texture009

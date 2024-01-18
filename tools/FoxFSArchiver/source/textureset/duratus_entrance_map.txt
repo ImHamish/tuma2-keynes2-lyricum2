@@ -1,0 +1,44 @@
+TextureSet
+
+TextureCount 4
+
+Start Texture001
+    "d:\ymir work\zone\plechi_dungeon\boss_room00\wall_tex00.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture001
+Start Texture002
+    "d:\ymir work\terrainmaps\plechi_env_map\grass\grass20.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture002
+Start Texture003
+    "d:\ymir work\terrainmaps\plechi_env_map\grass\grass22.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture003
+Start Texture004
+    "d:\ymir work\terrainmaps\plechi_env_map\field\plechi_field_03.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    1
+    0
+    0
+End Texture004

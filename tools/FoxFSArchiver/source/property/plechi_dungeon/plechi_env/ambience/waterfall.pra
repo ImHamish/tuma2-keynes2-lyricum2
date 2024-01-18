@@ -1,0 +1,9 @@
+YPRT
+2531383496
+ambiencesoundvector		"sound/plechito/environment/waterfall.wav"
+maxvolumeareapercentage		"0.500000"
+playinterval		"0.000000"
+playintervalvariation		"0.000000"
+playtype		"LOOP"
+propertyname		"waterfall"
+propertytype		"Ambience"

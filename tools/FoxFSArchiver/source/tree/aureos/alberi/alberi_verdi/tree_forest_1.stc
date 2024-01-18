@@ -1,0 +1,56 @@
+"__STC_v2.0__"
+MapName = "CompositeMap"
+Folder = ""
+CopyMaps = 0
+IncludeMipMaps = 1
+DataFile = 0
+UniformNoise = 1
+UniformLighting = 1
+BillboardsOnly = 0
+CleanUp = 1
+EmbedExtension = 1
+SeparateBillboardMap = 1
+StitchShadows = 1
+CreateBillboardNormalMaps = 1
+CreateLeafFrondDetailMaps = 0
+CreateLeafFrondHeightMaps = 0
+CreateLeafFrondNormalMaps = 1
+CreateLeafFrondSpecularMaps = 0
+CreateLeafFrondUser1Maps = 0
+CreateLeafFrondUser2Maps = 0
+LightDirectionX = -0.0162145
+LightDirectionY = 0.0516709
+LightDirectionZ = 0.998532
+LightDiffuseRed = 1
+LightDiffuseGreen = 1
+LightDiffuseBlue = 1
+LightAmbientRed = 0.498039
+LightAmbientGreen = 0.498039
+LightAmbientBlue = 0.498039
+LightSpecularRed = 1
+LightSpecularGreen = 1
+LightSpecularBlue = 1
+StandardShaders = 1
+LeafBorder = 0
+FrondBorder = 0
+BillboardBorder = 0
+ShadowBorder = 0
+TexCoordAdjust = 0.015
+Extension = 0
+ConvertBranchMaps = 1
+
+BeginEntry
+SptFile = "D:\ymir work\tree\aureos\alberi\alberi_verdi\tree_forest_1.spt"
+Billboards = 1
+Oversampling = -1
+StreakEdges = 1
+LOD = 0
+Size = 256
+Count = 6
+StreakPixels = 25
+360 = 1
+Horizontal = 0
+BackgroundRed = 0.282353
+BackgroundGreen = 0.305882
+BackgroundBlue = 0.235294
+EndEntry
