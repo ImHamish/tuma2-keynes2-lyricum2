@@ -1,3 +1,19 @@
+/*
+ Navicat MariaDB Data Transfer
+
+ Source Server         : Rewind2 - Test
+ Source Server Type    : MariaDB
+ Source Server Version : 100523
+ Source Host           : localhost:3306
+ Source Schema         : common
+
+ Target Server Type    : MariaDB
+ Target Server Version : 100523
+ File Encoding         : 65001
+
+ Date: 18/01/2024 23:26:28
+*/
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -161,7 +177,12 @@ CREATE TABLE `gmlist`  (
   `mServerIP` varchar(16) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT 'ALL',
   `mAuthority` enum('IMPLEMENTOR','GOD','HIGH_WIZARD','WIZARD','LOW_WIZARD','PLAYER') CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT 'PLAYER',
   PRIMARY KEY (`mID`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of gmlist
+-- ----------------------------
+INSERT INTO `gmlist` VALUES (1, 'root', 'Dev', '', 'ALL', 'IMPLEMENTOR');
 
 -- ----------------------------
 -- Table structure for locale

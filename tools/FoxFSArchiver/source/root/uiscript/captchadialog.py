@@ -1,0 +1,179 @@
+import uiscriptlocale
+
+BOARD_WIDTH=150
+BOARD_HEIGHT=125+35
+
+window={
+	"name":"CaptchaDialog",
+	"x":0,
+	"y":0,
+	"style":("attach",),
+	"width":SCREEN_WIDTH,
+	"height":SCREEN_HEIGHT,
+	"children":
+	(
+		{
+			"name":"thin_board",
+			"type":"thinboard",
+			"x":0,
+			"y":0,
+			"width":SCREEN_WIDTH,
+			"height":SCREEN_HEIGHT,
+		},
+		{
+			"name":"top_board_ui",
+			"type":"bar",
+			"x":0,
+			"y":0,
+			"vertical_align":"top",
+			"width":SCREEN_WIDTH,
+			"height":160,
+			"color":0xff000000,
+		},
+		{
+			"name":"bottom_board_ui",
+			"type":"bar",
+			"x":0,
+			"y":180,
+			"vertical_align":"bottom",
+			"width":SCREEN_WIDTH,
+			"height":180,
+			"color":0xff000000,
+		},
+		{
+			"name":"board",
+			"type":"board",
+			"x":0,
+			"y":0,
+			"width":BOARD_WIDTH,
+			"height":BOARD_HEIGHT,
+			"title":uiscriptlocale.CAPTCHA,
+			"horizontal_align":"center",
+			"vertical_align":"center",
+			"children":
+			(
+				{
+					"name":"thin_board",
+					"type":"thinboard",
+					"style":("attach",),
+					"x":10,
+					"y":31,
+					"width":BOARD_WIDTH-20,
+					"height":BOARD_HEIGHT-38,
+				},
+				{
+					"name":"title_bar",
+					"type":"titlebar",
+					"style":("attach",),
+					"x":8,
+					"y":8,
+					"width":BOARD_WIDTH-12,
+					"color":"yellow",
+					"children":
+					(
+						{
+							"name":"title_name",
+							"type":"text",
+							"x":0,
+							"y":3,
+							"horizontal_align":"center",
+							"text":uiscriptlocale.CAPTCHA,
+							"text_horizontal_align":"center"
+						},
+					),
+				},
+				{
+					"name":"random_captcha_slot",
+					"type":"image",
+					"x":20,
+					"y":34,
+					"image":"d:/ymir work/ui/game/user_alram/bg.sub",
+					"children":
+					(
+						{
+							"name":"random_captcha_info",
+							"type":"button",
+							"x":2,
+							"y":3,
+							"default_image":"d:/ymir work/ui/pattern/q_mark_01.tga",
+							"over_image":"d:/ymir work/ui/pattern/q_mark_02.tga",
+							"down_image":"d:/ymir work/ui/pattern/q_mark_02.tga",
+						},
+						{
+							"name":"captcha_time_image",
+							"type":"expanded_image",
+							"x":65,
+							"y":3,
+							"image":"d:/ymir work/ui/game/premiumshop/close_time_icon.sub",
+						},
+						{
+							"name":"captcha_time_name",
+							"type":"text",
+							"x":85,
+							"y":3,
+							"text":"00:00",
+						},
+					),
+				},
+				{
+					"name":"captcha_bg_ui",
+					"type":"thinboard_circle",
+					"x":0,
+					"y":34+25,
+					"horizontal_align":"center",
+					"width":62+2,
+					"height":27+2,
+				},
+				{
+					"name":"captcha_slot",
+					"type":"image",
+					"x":0,
+					"y":34+25+35,
+					"horizontal_align":"center",
+					"image":"d:/ymir work/ui/public/parameter_slot_02.sub",
+					"children":
+					(
+						{
+							"name":"captcha_value",
+							"type":"editline",
+							"x":3,
+							"y":3,
+							"width":150,
+							"height":18,
+							"input_limit":4,
+							"only_number":1,
+							"text":"",
+						},
+					),
+				},
+				{
+					"name":"accept_button",
+					"type":"button",
+					"x":-30,
+					"y":88+33,
+					"tooltip_text":uiscriptlocale.CAPTCHA_CONFIRM,
+					"tooltip_x":0,
+					"tooltip_y":-13,
+					"horizontal_align":"center",
+					"default_image":"d:/ymir work/ui/public/acceptbutton00.sub",
+					"over_image":"d:/ymir work/ui/public/acceptbutton01.sub",
+					"down_image":"d:/ymir work/ui/public/acceptbutton02.sub",
+				},
+				{
+					"name":"cancel_button",
+					"type":"button",
+					"x":30,
+					"y":88+33,
+					"tooltip_text":uiscriptlocale.CAPTCHA_CANCEL,
+					"tooltip_x":0,
+					"tooltip_y":-13,
+					"horizontal_align":"center",
+					"default_image":"d:/ymir work/ui/public/canclebutton00.sub",
+					"over_image":"d:/ymir work/ui/public/canclebutton01.sub",
+					"down_image":"d:/ymir work/ui/public/canclebutton02.sub",
+				},
+			),
+		},
+	),
+}
+

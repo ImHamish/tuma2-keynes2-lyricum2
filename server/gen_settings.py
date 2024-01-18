@@ -68,7 +68,7 @@ M2CONFIG_SRV1 = {
 			("ITEM_ID_RANGE = %u %u ", (100000000, 200000000)),
 			# ("BACKUP_LIMIT_SEC = %u", (3600)),
 			("LOCALE = %s", ("latin1")),
-			("TEST_SERVER = %d", (True)),
+			("TEST_SERVER = %d", (False)),
 			("LOG = %d", (False)),
 		),
 		"extra": (
@@ -122,7 +122,7 @@ M2CONFIG_SRV1 = {
 			("DB_ADDR: %s", (v_dbHostname)),
 			("COMMON_SQL: %s %s %d", (v_serverData, M2SD_SRV1["common"], v_mysqlport)),
 			("LOG_SQL: %s %s %d", (v_serverData, M2SD_SRV1["log"], v_mysqlport)),
-			("TEST_SERVER: %d", (True)),
+			("TEST_SERVER: %d", (False)),
 			("PK_SERVER: %d", (True)),
 			("ADMINPAGE_IP1: %s", (v_adminPageLocalIP)),
 			("ADMINPAGE_PASSWORD: %s", (v_adminPagePassword)),

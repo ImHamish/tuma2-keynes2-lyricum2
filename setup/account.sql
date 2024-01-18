@@ -1,3 +1,19 @@
+/*
+ Navicat MariaDB Data Transfer
+
+ Source Server         : Rewind2 - Test
+ Source Server Type    : MariaDB
+ Source Server Version : 100523
+ Source Host           : localhost:3306
+ Source Schema         : account
+
+ Target Server Type    : MariaDB
+ Target Server Version : 100523
+ File Encoding         : 65001
+
+ Date: 18/01/2024 23:26:22
+*/
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -24,6 +40,7 @@ CREATE TABLE `account`  (
   `fish_mind_expire` datetime(0) NOT NULL DEFAULT '2000-00-00 00:00:00',
   `marriage_fast_expire` datetime(0) NOT NULL DEFAULT '2000-00-00 00:00:00',
   `money_drop_rate_expire` datetime(0) NOT NULL DEFAULT '2000-00-00 00:00:00',
+  `auto_use_expire` datetime(0) NOT NULL DEFAULT '2000-00-00 00:00:00',
   `bonus1_expire` datetime(0) NOT NULL DEFAULT '2000-00-00 00:00:00',
   `bonus2_expire` datetime(0) NOT NULL DEFAULT '2000-00-00 00:00:00',
   `bonus3_expire` datetime(0) NOT NULL DEFAULT '2000-00-00 00:00:00',
@@ -57,7 +74,12 @@ CREATE TABLE `account`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `login`(`login`) USING BTREE,
   INDEX `social_id`(`social_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of account
+-- ----------------------------
+INSERT INTO `account` VALUES (1, 'root', 'EN', '34c6fceca75e456f25e7e99531e2425c6c1de443', '', '', 'OK', NULL, NULL, '2030-02-10 18:30:34', '2024-01-18 23:21:44', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', '2000-00-00 00:00:00', NULL, '', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 0, NULL, 0x46367039496E305345585869632B38584B742F333679675771716B6F6465306650786F386D61796B54614D3D, '2024-01-18 22:42:46', NULL, 0, '', '', '', '', NULL, '2022-08-28 20:04:18', 0, 0, NULL, 0);
 
 -- ----------------------------
 -- Table structure for antifarm

@@ -1,3 +1,19 @@
+/*
+ Navicat MariaDB Data Transfer
+
+ Source Server         : Rewind2 - Test
+ Source Server Type    : MariaDB
+ Source Server Version : 100523
+ Source Host           : localhost:3306
+ Source Schema         : log
+
+ Target Server Type    : MariaDB
+ Target Server Version : 100523
+ File Encoding         : 65001
+
+ Date: 18/01/2024 23:26:33
+*/
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
