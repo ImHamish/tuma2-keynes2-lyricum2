@@ -1,0 +1,139 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner.tga]
+[CENTER_ALIGN;FONT_SIZE=24]AICI VEI GASI CELE MAI IMPORTANTE HOTKEYS
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=30; CENTER_ALIGN]
+
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide sistemul de provocari.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide calendarul de evenimente.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide dungeon info.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide battlepass.
+
+[X_PADDING=135;FONT_SIZE=15]* Roteºte camera spre stânga.
+
+[X_PADDING=135;FONT_SIZE=15]* Mergi înainte (ºi cu sãgeþile direcþionale).
+
+[X_PADDING=135;FONT_SIZE=15]* Mergi înapoi (ºi cu sãgeþile direcþionale).
+
+[X_PADDING=135;FONT_SIZE=15]* Mergi la stânga (ºi cu sãgeþile direcþionale).
+
+[X_PADDING=135;FONT_SIZE=15]* Mergi la dreapta (ºi cu sãgeþile direcþionale).
+
+[X_PADDING=135;FONT_SIZE=15]* Roteºte camera spre dreapta.
+
+[X_PADDING=135;FONT_SIZE=15]* Aduci camera mai aproape de caracter.
+
+[X_PADDING=135;FONT_SIZE=15]* Duci camera mai departe de caracter.
+
+[X_PADDING=135;FONT_SIZE=15]* Determini înãlþimea faþã de caracter.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide magazinul offline
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide inventarul extra.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide inventarul.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide alchimia.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide wiki.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide protocolul de chat.
+
+[X_PADDING=135;FONT_SIZE=15]* Ridicã iteme de la pãmânt.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide panoul caracterului.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide panoul abilitãþilor.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide panoul emoþiilor.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide panoul misiunilor.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide harta.
+
+[X_PADDING=135;FONT_SIZE=15]* Urcã/Coboarã de pe mount.
+
+[X_PADDING=135;FONT_SIZE=15]* Hrãneºte calul.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide fereastra breslei.
+
+[X_PADDING=135;FONT_SIZE=15]* Atacã.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide fereastra de chat strigã.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide fereastra de chat privatã.
+
+[X_PADDING=135;FONT_SIZE=15]* Aratã/Ascunde scrisorile misiunilor.
+
+[X_PADDING=135;FONT_SIZE=15]* Opþiuni.
+
+[X_PADDING=135;FONT_SIZE=15]* Afiºseazã/Ascunde mini-harta.
+
+[X_PADDING=135;FONT_SIZE=15]* Deschide lista de prieteni.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Benzi desenate cu ironie.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Balon cu ploaie de bani.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Instrument muzical.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Inima care bate.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Inima care bate cu inimioare mai mici pe fundal.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Bombã.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Idee.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Trist ºi supãrat.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoþie: Scuze.
+
+
+[IMG=d:/ymir work/ui/wiki/emoji/f5.tga; Y=46; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f6.tga; Y=73; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f7.tga; Y=100; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f8.tga; Y=127; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/q.tga; Y=154; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/w.tga; Y=181; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/s.tga; Y=208; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/a.tga; Y=235; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/d.tga; Y=262; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/e.tga; Y=289; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/r_plus_click.tga; Y=316; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f_plus_click.tga; Y=343; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/g_or_t.tga; Y=370; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/y.tga; Y=397; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/u.tga; Y=424; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/i.tga; Y=451; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/o.tga; Y=478; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/h.tga; Y=505; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/l.tga; Y=532; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/z.tga; Y=559; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/c.tga; Y=586; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/v.tga; Y=613; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/b.tga; Y=640; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/n.tga; Y=667; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/m.tga; Y=694; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_h.tga; Y=721; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_f.tga; Y=748; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/alt_plus_g.tga; Y=775; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/space.tga; Y=802; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/enter.tga; Y=829; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/shift_plus_enter.tga; Y=856; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_q.tga; Y=883; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/esc.tga; Y=910; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/shift_plus_m.tga; Y=937; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/alt_plus_m.tga; Y=964; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_1.tga; Y=991; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_2.tga; Y=1018; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_3.tga; Y=1045; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_4.tga; Y=1072; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_5.tga; Y=1099; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_6.tga; Y=1126; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_7.tga; Y=1153; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_8.tga; Y=1180; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_9.tga; Y=1207; X=12]

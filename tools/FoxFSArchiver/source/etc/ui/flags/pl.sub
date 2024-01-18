@@ -1,0 +1,7 @@
+title subImage
+version 2.0
+image "8.tga"
+left 0
+top 0
+right 16
+bottom 12

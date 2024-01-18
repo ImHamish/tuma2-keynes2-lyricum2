@@ -2412,60 +2412,6 @@ PyObject* playerGetItemAttrLocked(PyObject* poSelf, PyObject* poArgs)
 }
 #endif
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-PyObject* playerSetSkillColor(PyObject* poSelf, PyObject* poArgs)
-{
-	int iSkillSlot;
-	if (!PyTuple_GetInteger(poArgs, 0, &iSkillSlot))
-		return Py_BadArgument();
-
-	int iColor1;
-	if (!PyTuple_GetInteger(poArgs, 1, &iColor1))
-		return Py_BadArgument();
-
-	int iColor2;
-	if (!PyTuple_GetInteger(poArgs, 2, &iColor2))
-		return Py_BadArgument();
-
-	int iColor3;
-	if (!PyTuple_GetInteger(poArgs, 3, &iColor3))
-		return Py_BadArgument();
-
-	int iColor4;
-	if (!PyTuple_GetInteger(poArgs, 4, &iColor4))
-		return Py_BadArgument();
-
-	int iColor5;
-	if (!PyTuple_GetInteger(poArgs, 5, &iColor5))
-		return Py_BadArgument();
-
-	if (iSkillSlot >= 255 || iSkillSlot < 0 || iColor1 < 0 || iColor2 < 0 || iColor3 < 0 || iColor4 < 0 || iColor5 < 0)
-		return Py_BadArgument();
-
-	CPythonNetworkStream& nstr = CPythonNetworkStream::Instance();
-	nstr.SendSkillColorPacket(iSkillSlot, iColor1, iColor2, iColor3, iColor4, iColor5);
-
-	return Py_BuildNone();
-}
-
-PyObject* playerGetSkillColor(PyObject* poSelf, PyObject* poArgs)
-{
-	int iSkillSlot;
-	if (!PyTuple_GetInteger(poArgs, 0, &iSkillSlot))
-		return Py_BadArgument();
-
-	if (iSkillSlot >= 255 || iSkillSlot < 0)
-		return Py_BadArgument();
-
-	CInstanceBase* pMainInstance = CPythonPlayer::Instance().NEW_GetMainActorPtr();
-	DWORD* dwSkillColor = pMainInstance->GetSkillColor(iSkillSlot);
-	if (!dwSkillColor)
-		return Py_BuildValue("iiiii", 0, 0, 0, 0, 0);
-
-	return Py_BuildValue("iiiii", dwSkillColor[0], dwSkillColor[1], dwSkillColor[2], dwSkillColor[3], dwSkillColor[4]);
-}
-#endif
-
 PyObject* playerGetLevel(PyObject* poSelf, PyObject* poArgs)
 {
 	DWORD dwLevel = CPythonPlayer::Instance().GetStatus(POINT_LEVEL);
@@ -3438,10 +3384,6 @@ void initPlayer()
 		{ "CanSealItem",				playerCanSealItem,					METH_VARARGS },
 		{ "GetItemSealDate",			playerGetItemSealDate,				METH_VARARGS },
 		{ "GetItemUnSealLeftTime",		GetItemUnSealLeftTime,				METH_VARARGS },
-#endif
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		{ "SetSkillColor",					playerSetSkillColor,				METH_VARARGS },
-		{ "GetSkillColor",					playerGetSkillColor,				METH_VARARGS },
 #endif
 #if defined(USE_BATTLEPASS)
 		{"GetBattlePassID", playerGetBattlePassID, METH_VARARGS},

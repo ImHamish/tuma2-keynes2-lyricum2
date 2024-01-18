@@ -1584,16 +1584,6 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "NEW_PET_SYSTEM",	0);
 #endif
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	PyModule_AddIntConstant(poModule, "ENABLE_SKILL_COLOR_SYSTEM", 1);
-#ifdef ENABLE_5LAYER_SKILL_COLOR
-	PyModule_AddIntConstant(poModule, "ENABLE_5LAYER_SKILL_COLOR", 1);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_5LAYER_SKILL_COLOR", 0);
-#endif
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_SKILL_COLOR_SYSTEM", 0);
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 	PyModule_AddIntConstant(poModule, "ENABLE_PREMIUM_PLAYERS", 1);
 #else

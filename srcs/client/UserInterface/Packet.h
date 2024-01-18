@@ -82,10 +82,6 @@ enum
 	HEADER_CG_ADD_FLY_TARGETING                 = 53,
 	HEADER_CG_SHOOT								= 54,
 	HEADER_CG_MYSHOP                            = 55,
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	HEADER_CG_SKILL_COLOR						= 56,
-#endif
 #ifdef ENABLE_OPENSHOP_PACKET
 	HEADER_CG_OPENSHOP = 57,
 #endif
@@ -1468,10 +1464,6 @@ typedef struct packet_char_additional_info
     BYTE 	byPremium;
     long int iPremiumTime;
 #endif
-	
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	DWORD	dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
 	char country_flag[3 + 1];
 	BYTE bGuildLeaderGrade;
 } TPacketGCCharacterAdditionalInfo;
@@ -1545,10 +1537,6 @@ typedef struct packet_update_char
 #ifdef ENABLE_PREMIUM_PLAYERS
     BYTE 		byPremium;
     long int 	iPremiumTime;
-#endif
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	DWORD		dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
 #endif
 	BYTE bGuildLeaderGrade;
 } TPacketGCCharacterUpdate;
@@ -3618,19 +3606,6 @@ typedef struct SPacketGCGetWhisperDetails {
 	BYTE	bEmpire;
 } TPacketGCGetWhisperDetails;
 
-#endif
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-typedef struct packet_skill_color
-{
-	BYTE		bheader;
-	BYTE		skill;
-	DWORD		col1;
-	DWORD		col2;
-	DWORD		col3;
-	DWORD		col4;
-	DWORD		col5;
-}TPacketCGSkillColor;
 #endif
 
 #ifdef ENABLE_ATLAS_BOSS

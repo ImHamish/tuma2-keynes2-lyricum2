@@ -2474,7 +2474,6 @@ namespace UI
 	}
 
 
- // #if app.ENABLE_SKILL_COLOR_SYSTEM
 	void CButton::EnableFlash()
 	{
 		m_isFlash = true;

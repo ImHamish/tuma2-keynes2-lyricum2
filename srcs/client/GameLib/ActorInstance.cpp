@@ -478,13 +478,6 @@ bool CActorInstance::IsObject()
 	return false;
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CActorInstance::ChangeSkillColor(const DWORD * dwSkillColor)
-{
-	memcpy(m_dwSkillColor, dwSkillColor, sizeof(m_dwSkillColor));
-}
-#endif
-
 void CActorInstance::DestroySystem()
 {
 }
@@ -1121,10 +1114,6 @@ void CActorInstance::__Initialize()
 	__BlendAlpha_Initialize();
 
 	ClearFlyTargeter();
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	memset(m_dwSkillColor, 0, sizeof(m_dwSkillColor));
-#endif
 
 #if defined(USE_NPC_WEAR_ITEM)
 	m_dwRealRaceIndex = 0;

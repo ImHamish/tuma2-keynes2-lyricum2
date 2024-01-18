@@ -143,16 +143,6 @@ const uint16_t c_EquipmentTalisman2Start = c_Equipment_Start + CItemData::WEAR_T
 const uint16_t c_EquipmentTalisman2End = c_Equipment_Start + CItemData::WEAR_TALISMAN2_ELEC;
 #endif
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-enum ESkillColorLength
-{
-	MAX_SKILL_COUNT = 6,
-	MAX_EFFECT_COUNT = 5,
-	BUFF_BEGIN = MAX_SKILL_COUNT,
-	MAX_BUFF_COUNT = 5,
-};
-#endif
-
 enum EDragonSoulDeckType
 {
 	DS_DECK_1,

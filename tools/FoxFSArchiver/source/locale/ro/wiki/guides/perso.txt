@@ -1,0 +1,30 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/ro/perso.png]
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]Cum sa obtii un set personalizat:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=30; CENTER_ALIGN]
+
+[X_PADDING=12]1. Cumparã un CUFAR SET PERSONALIZAT din itemshop.
+[X_PADDING=12]2. Înainte de predarea Cufarului, asigurã-te cã ai o idee despre cum ai vrea sã arate setul.
+[X_PADDING=12]Va scurta timpul de aºteptare.
+[X_PADDING=12]3. Oferã voucherele unuia dintre: [OwN]AstaMicu, [SA]Tiganu, [GFX]Malini
+[X_PADDING=12]4. Contacteazã în joc sau pe discord: [GFX]Malini pentru a discuta despre DESIGN-ul itemelor.
+[X_PADDING=12]5. Cuferele se colecteazã LUNI ªI MARTI, iar implementarea se va face SAMBATA dupã mentenanþã.
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]Bonusarea setului:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=30; CENTER_ALIGN]
+
+[X_PADDING=12]1. Ai dreptul sa alegi câte 1 bonus pre-stabilit: PVM sau PVP.
+[X_PADDING=12]- Bonusuri Maxime PvM: 25%(echivalent Editie Limitata)
+[X_PADDING=12]- Bonusuri Maxime PvP: 10% (+10% crit pe costum si 1k pv pe frizura)
+[X_PADDING=12]2. Alegerea bonusurilor pre-stabilite este obligatorie ºi odata alese, nu pot fi schimbate.
+[X_PADDING=12]Pe lângã cele pre-stabilite, costumele vin ºi cu 3 bonusuri la întamplare ce pot fi schimbate în joc.
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]Informatii EXTRA:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=30; CENTER_ALIGN]
+
+[X_PADDING=12]1. Cufarul personalizat poate fi vândut la alþi jucãtori.
+[X_PADDING=12]2. Nu se accepta cufere in nici-o alta zi inafara de cele specificate(luni,marti)
+[X_PADDING=12]3. Jucatorii sunt obligati dupa predare sa discute cu gfx-ul si sa obtina personalizatul pana VINERI
+[X_PADDING=12]in caz contrar sunt sanse mari sa nu aveti setul personalizat implementat SAMBATA
+
+[X_PADDING=12] Pentru orice informaþii suplimentare, nu ezitaþi sã contactaþi un membru STAFF.

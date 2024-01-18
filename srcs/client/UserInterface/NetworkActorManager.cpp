@@ -101,9 +101,6 @@ void SNetworkActorData::__copy__(const SNetworkActorData& src)
 	m_dwLevel = src.m_dwLevel;
 	m_stName = src.m_stName;
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	memcpy(m_dwSkillColor, src.m_dwSkillColor, sizeof(m_dwSkillColor));
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 	m_byPremium = src.m_byPremium;
 	m_iPremiumTime = src.m_iPremiumTime;
@@ -149,9 +146,6 @@ SNetworkActorData::SNetworkActorData()
 	m_dwMountVnum=0;
 	m_stName="";
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	memset(m_dwSkillColor, 0, sizeof(m_dwSkillColor));
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 	m_byPremium = 0;
 	m_iPremiumTime = 0;
@@ -411,9 +405,6 @@ CInstanceBase* CNetworkActorManager::__AppendCharacterManagerActor(SNetworkActor
 	kCreateData.m_country_flag = rkNetActorData.m_country_flag;
 	kCreateData.m_isMain=__IsMainActorVID(dwVID);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	memcpy(kCreateData.m_dwSkillColor, rkNetActorData.m_dwSkillColor, sizeof(kCreateData.m_dwSkillColor));
-#endif
 	kCreateData.m_bGuildLeaderGrade = rkNetActorData.m_bGuildLeaderGrade;
 
 	CInstanceBase* pOldInstance = rkChrMgr.GetInstancePtr(dwVID);
@@ -474,11 +465,6 @@ void CNetworkActorManager::AppendActor(const SNetworkActorData& c_rkNetActorData
 		{
 			BOOL bIsMountingHorse = pMainInstance->IsMountingHorse();
 			bChangeMountStatus = (bIsMountingHorse && c_rkNetActorData.m_dwMountVnum == 0) || (!bIsMountingHorse && c_rkNetActorData.m_dwMountVnum != 0);
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			pMainInstance->ChangeSkillColor(*c_rkNetActorData.m_dwSkillColor);
-#endif
-
 		}
 
 		if( !bChangeMountStatus )
@@ -555,9 +541,6 @@ void CNetworkActorManager::UpdateActor(const SNetworkUpdateActorData& c_rkNetUpd
 		pkInstFind->SetPKMode(c_rkNetUpdateActorData.m_byPKMode);
 		pkInstFind->SetStateFlags(c_rkNetUpdateActorData.m_dwStateFlags);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		pkInstFind->ChangeSkillColor(*c_rkNetUpdateActorData.m_dwSkillColor);
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 		pkInstFind->SetPremiumPlayer(c_rkNetUpdateActorData.m_byPremium);
 		pkInstFind->SetPremiumPlayerTime(c_rkNetUpdateActorData.m_iPremiumTime);
@@ -598,9 +581,6 @@ void CNetworkActorManager::UpdateActor(const SNetworkUpdateActorData& c_rkNetUpd
 #ifdef ENABLE_PREMIUM_PLAYERS
 	rkNetActorData.m_byPremium = c_rkNetUpdateActorData.m_byPremium;
 	rkNetActorData.m_iPremiumTime = c_rkNetUpdateActorData.m_iPremiumTime;
-#endif
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	memcpy(rkNetActorData.m_dwSkillColor, c_rkNetUpdateActorData.m_dwSkillColor, sizeof(rkNetActorData.m_dwSkillColor));
 #endif
 }
 

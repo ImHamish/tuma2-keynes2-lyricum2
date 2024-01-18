@@ -1,0 +1,5 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner.tga]
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]STRUCTURA SISTEMULUI
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1184; CENTER_ALIGN]

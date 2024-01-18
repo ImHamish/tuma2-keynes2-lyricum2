@@ -26,11 +26,6 @@ BOOL g_test_server = false;
 int g_iPlayerCacheFlushSeconds = 60*5;
 int g_iItemCacheFlushSeconds = 60*5;
 
-#ifdef __SKILL_COLOR_SYSTEM__
-	int g_iSkillColorCacheFlushSeconds = 60*7;
-#endif
-
-
 //g_iLogoutSeconds 수치는 g_iPlayerCacheFlushSeconds 와 g_iItemCacheFlushSeconds 보다 길어야 한다.
 int g_iLogoutSeconds = 60*10;
 

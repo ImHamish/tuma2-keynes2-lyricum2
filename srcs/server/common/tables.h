@@ -151,10 +151,6 @@ enum
 #ifdef ENABLE_CHANNEL_SWITCH_SYSTEM
 	HEADER_GD_FIND_CHANNEL = 144,
 #endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	HEADER_GD_SKILL_COLOR_SAVE = 145,
-#endif
 	HEADER_GD_GUILD_SYMBOL_AUTH_KEY = 146,
 	HEADER_GD_SETUP = 0xff,
 
@@ -288,10 +284,6 @@ enum
 #endif
 #ifdef ENABLE_ITEM_EXTRA_PROTO
 	HEADER_DG_ITEM_EXTRA_PROTO_LOAD = 184,
-#endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	HEADER_DG_SKILL_COLOR_LOAD = 185,
 #endif
 #ifdef ENABLE_EVENT_MANAGER
 	HEADER_DG_EVENT_MANAGER = 186,
@@ -2021,14 +2013,6 @@ typedef struct {
 	DWORD dwTableSize;
 } TPacketDGLoadItemExtraProto;
 
-#endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-typedef struct
-{
-	DWORD	player_id;
-	DWORD	dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + ESkillColorLength::MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-} TSkillColor;
 #endif
 
 #if defined(BL_OFFLINE_MESSAGE)

@@ -99,10 +99,6 @@
 #define ENABLE_ACCE_SYSTEM
 #define ENABLE_OBJ_SCALLING
 #define	ENABLE_FEATURES_REFINE_SYSTEM		// Refine System
-#define ENABLE_SKILL_COLOR_SYSTEM 			// Skill color
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-#define ENABLE_5LAYER_SKILL_COLOR 			// Enable 5 layers for skill color
-#endif
 #define ENABLE_CONFIG_MODULE 					// Enable configuration module for saving settings
 #define ENABLE_NEW_EXCHANGE_WINDOW
 #define ENABLE_PVP_ADVANCED

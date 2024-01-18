@@ -44,11 +44,6 @@ void CFlyingInstance::__Initialize()
 
 	m_bTargetHitted = FALSE;
 	m_HittedObjectSet.clear();
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	memset(m_dwSkillColor, 0, sizeof(m_dwSkillColor));
-#endif
-
 }
 
 void CFlyingInstance::Clear()
@@ -94,12 +89,8 @@ void CFlyingInstance::BuildAttachInstance()
 						aei.pFlyTrace = CFlyTrace::New();
 						aei.pFlyTrace->Create(rfad);
 					}
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-					rem.CreateEffectInstance(aei.dwEffectInstanceIndex, dwCRC, m_dwSkillColor);
-#else
-					rem.CreateEffectInstance(aei.dwEffectInstanceIndex,dwCRC);
-#endif
 
+					rem.CreateEffectInstance(aei.dwEffectInstanceIndex,dwCRC);
 					m_vecAttachEffectInstance.push_back(aei);
 				}
 				break;
@@ -541,11 +532,8 @@ void CFlyingInstance::__Bomb()
 		return;
 
 	DWORD dwEmptyIndex = rkEftMgr.GetEmptyIndex();
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	rkEftMgr.CreateEffectInstance(dwEmptyIndex, m_pData->m_dwBombEffectID, m_dwSkillColor);
-#else
+
 	rkEftMgr.CreateEffectInstance(dwEmptyIndex,m_pData->m_dwBombEffectID);
-#endif
 
 	D3DXMATRIX m;
 //	D3DXMatrixRotationQuaternion(&m,&m_qRot);

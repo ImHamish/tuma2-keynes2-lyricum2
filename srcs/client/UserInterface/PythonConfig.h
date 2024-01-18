@@ -14,9 +14,6 @@ public:
 		CLASS_GENERAL,
 		CLASS_CHAT,
 		CLASS_OPTION,
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		CLASS_SKILL_COLOR,
-#endif
 	};
 
 public:

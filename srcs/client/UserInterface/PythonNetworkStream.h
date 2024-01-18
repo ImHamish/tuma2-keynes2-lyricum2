@@ -154,10 +154,6 @@ UINT uMotAttack, DWORD dwVIDVictim
 		bool SendCharacterStatePacket(const TPixelPosition& c_rkPPosDst, float fDstRot, UINT eFunc, UINT uArg);
 		bool SendUseSkillPacket(DWORD dwSkillIndex, DWORD dwTargetVID=0);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		bool SendSkillColorPacket(BYTE bSkillSlot, DWORD dwColor1, DWORD dwColor2, DWORD dwColor3, DWORD dwColor4, DWORD dwColor5);
-#endif
-
 		bool SendTargetPacket(DWORD dwVID);
 
 		// OLDCODE:

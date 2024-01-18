@@ -1,10 +1,3 @@
-data/
-effect/
-etc/
-guild/
-icon/
-item/
-locale/
 map/
 monster/
 monster2/
@@ -12,10 +5,6 @@ npc/
 npc_mount/
 npc_pet/
 npc2/
-patch1/
-patch1_d/
-patch2/
-patch2_d/
 pc/
 pc2/
 root/

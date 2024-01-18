@@ -8,10 +8,6 @@
 #include "ItemAwardManager.h"
 #include "Cache.h"
 
-#ifdef __SKILL_COLOR_SYSTEM__
-#include "../common/length.h"
-#endif
-
 extern std::string g_stLocale;
 extern int g_test_server;
 extern int g_log;
@@ -79,26 +75,6 @@ bool CreateItemTableFromRes(MYSQL_RES * res, std::vector<TPlayerItem> * pVec, DW
 
 	return true;
 }
-
-#ifdef __SKILL_COLOR_SYSTEM__
-bool CreateSkillColorTableFromRes(MYSQL_RES * res, DWORD * dwSkillColor)
-{
-	if (mysql_num_rows(res) == 0)
-		return false;
-
-	MYSQL_ROW row = mysql_fetch_row(res);
-
-	for (int x = 0; x < ESkillColorLength::MAX_SKILL_COUNT + ESkillColorLength::MAX_BUFF_COUNT; ++x)
-	{
-		for (int i = 0; i < ESkillColorLength::MAX_EFFECT_COUNT; ++i)
-		{
-			*(dwSkillColor++) = atoi(row[i + (x*ESkillColorLength::MAX_EFFECT_COUNT)]);
-		}
-	}
-
-	return true;
-}
-#endif
 
 size_t CreatePlayerSaveQuery(char * pszQuery, size_t querySize, TPlayerTable * pkTab)
 {
@@ -352,40 +328,6 @@ void CClientManager::PutPlayerCache(TPlayerTable * pNew)
 /*
  * PLAYER LOAD
  */
-
-
-#ifdef __SKILL_COLOR_SYSTEM__
-void CClientManager::QUERY_SKILL_COLOR_LOAD(CPeer * peer, DWORD dwHandle, TPlayerLoadPacket * packet)
-{
-	CSKillColorCache * c = GetSkillColorCache(packet->player_id);
-	TSkillColor * p;
-	if (c)
-	{
-		p = c->Get();
-		peer->EncodeHeader(HEADER_DG_SKILL_COLOR_LOAD, dwHandle, sizeof(p->dwSkillColor));
-		peer->Encode(p->dwSkillColor, sizeof(p->dwSkillColor));
-	}
-	else
-	{
-		char szQuery[QUERY_MAX_LEN];
-		snprintf(szQuery, sizeof(szQuery), "SELECT "
-			"s1_col1, s1_col2, s1_col3, s1_col4, s1_col5, "
-			"s2_col1, s2_col2, s2_col3, s2_col4, s2_col5, "
-			"s3_col1, s3_col2, s3_col3, s3_col4, s3_col5, "
-			"s4_col1, s4_col2, s4_col3, s4_col4, s4_col5, "
-			"s5_col1, s5_col2, s5_col3, s5_col4, s5_col5, "
-			"s6_col1, s6_col2, s6_col3, s6_col4, s6_col5, " // end of skills
-			"s7_col1, s7_col2, s7_col3, s7_col4, s7_col5, " // begin of buffs
-			"s8_col1, s8_col2, s8_col3, s8_col4, s8_col5, "
-			"s9_col1, s9_col2, s9_col3, s9_col4, s9_col5, "
-			"s10_col1, s10_col2, s10_col3, s10_col4, s10_col5 "
-			"s11_col1, s11_col2, s11_col3, s11_col4, s11_col5 "
-			"FROM skill_color%s WHERE player_id=%d",
-			GetTablePostfix(), packet->player_id);
-		CDBManager::instance().ReturnQuery(szQuery, QID_SKILL_COLOR, peer->GetHandle(), new ClientHandleInfo(dwHandle, packet->player_id));
-	}
-}
-#endif
 
 void CClientManager::QUERY_PLAYER_LOAD(CPeer * peer, DWORD dwHandle, TPlayerLoadPacket * packet)
 {
@@ -944,14 +886,6 @@ void CClientManager::RESULT_COMPOSITE_PLAYER(CPeer * peer, SQLMsg * pMsg, DWORD 
 			sys_log(0, "QID_ITEM %u", info->dwHandle);
 			RESULT_ITEM_LOAD(peer, pSQLResult, info->dwHandle, info->player_id);
 			break;
-
-#ifdef __SKILL_COLOR_SYSTEM__
-		case QID_SKILL_COLOR:
-			sys_log(0, "QID_SKILL_COLOR %u %u", info->dwHandle, info->player_id);
-			RESULT_SKILL_COLOR_LOAD(peer, pSQLResult, info->dwHandle);
-			break;
-#endif
-
         case QID_QUEST:
         {
             sys_log(0, "QID_QUEST %u", info->dwHandle);
@@ -1094,19 +1028,6 @@ void CClientManager::RESULT_ITEM_LOAD(CPeer * peer, MYSQL_RES * pRes, DWORD dwHa
 			PutItemCache(&s_items[i], true); // 로드한 것은 따로 저장할 필요 없으므로, 인자 bSkipQuery에 true를 넣는다.
 	}
 }
-
-#ifdef __SKILL_COLOR_SYSTEM__
-void CClientManager::RESULT_SKILL_COLOR_LOAD(CPeer * peer, MYSQL_RES * pRes, DWORD dwHandle)
-{
-	DWORD dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + ESkillColorLength::MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-	memset(dwSkillColor, 0, sizeof(dwSkillColor));
-
-	CreateSkillColorTableFromRes(pRes, *dwSkillColor);
-	sys_log(0, "SKILL_COLOR_LOAD %i, %i, %i, %i,", dwSkillColor[0][0], dwSkillColor[1][1], dwSkillColor[2][2], dwSkillColor[3][3]);
-	peer->EncodeHeader(HEADER_DG_SKILL_COLOR_LOAD, dwHandle, sizeof(dwSkillColor));
-	peer->Encode(&dwSkillColor, sizeof(dwSkillColor));
-}
-#endif
 
 // @fixme402 (RESULT_AFFECT_LOAD +dwRealPID)
 void CClientManager::RESULT_AFFECT_LOAD(CPeer * peer, MYSQL_RES * pRes, DWORD dwHandle, DWORD dwRealPID)

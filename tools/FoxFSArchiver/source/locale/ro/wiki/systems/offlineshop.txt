@@ -1,0 +1,34 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner.tga]
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]STRUCTURA SISTEMULUI
+
+[X_PADDING=12]1. Poþi accesa Search shopul apasand pe iconita de pe inventar
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=184; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]FUNCÞIONALITAÞILE OPÞIUNILOR
+
+
+
+
+[X_PADDING=12]3. Depozit: în aceastã fereastrã vei gãsi itemele nevândute ºi poþi retrage suma vânzãrilor.
+
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=482; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]ALTELE
+
+
+[IMG=d:/ymir work/ui/wiki/rahmen.tga; Y=583; X=228]
+[IMG=icon/item/88901.tga; Y=593; X=250]
+
+
+
+
+
+[X_PADDING=248]Kashmir
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=668; CENTER_ALIGN]
+

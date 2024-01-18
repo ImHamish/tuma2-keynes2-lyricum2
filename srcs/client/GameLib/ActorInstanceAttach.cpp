@@ -272,11 +272,7 @@ DWORD CActorInstance::AttachEffectByName(DWORD dwParentPartIndex, const char * c
 	return AttachEffectByID(dwParentPartIndex, c_pszBoneName, dwCRC);
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-DWORD CActorInstance::AttachEffectByID(DWORD dwParentPartIndex, const char * c_pszBoneName, DWORD dwEffectID, const D3DXVECTOR3 * c_pv3Position, DWORD * dwSkillColor, float fParticleScale, const D3DXVECTOR3* c_pv3MeshScale)
-#else
 DWORD CActorInstance::AttachEffectByID(DWORD dwParentPartIndex, const char * c_pszBoneName, DWORD dwEffectID, const D3DXVECTOR3 * c_pv3Position, float fParticleScale, const D3DXVECTOR3* c_pv3MeshScale)
-#endif
 {
 	TAttachingEffect ae;
 	ae.iLifeType = EFFECT_LIFE_INFINITE;
@@ -294,9 +290,6 @@ DWORD CActorInstance::AttachEffectByID(DWORD dwParentPartIndex, const char * c_p
 	}
 	CEffectManager& rkEftMgr=CEffectManager::Instance();
 	rkEftMgr.CreateEffectInstanceWithScale(ae.dwEffectIndex, dwEffectID
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, dwSkillColor
-#endif
 	, fParticleScale, c_pv3MeshScale);
 	if (c_pszBoneName)
 	{

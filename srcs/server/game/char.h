@@ -1566,15 +1566,6 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 		LPCHARACTER		m_pkChrShopOwner;
 		// End of shop
 
-#ifdef __SKILL_COLOR_SYSTEM__
-	public:
-		void			SetSkillColor(DWORD* dwSkillColor);
-		DWORD* GetSkillColor() { return m_dwSkillColor[0]; }
-
-	protected:
-		DWORD			m_dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + ESkillColorLength::MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
-
 		////////////////////////////////////////////////////////////////////////////////////////
 		// Exchange related
 	public:

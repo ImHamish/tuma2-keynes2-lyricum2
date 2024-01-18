@@ -317,9 +317,6 @@ void CInstanceBase::CreateSpecialEffect(DWORD iEffectIndex, float fScale)
 	DWORD dwEffectIndex = CEffectManager::Instance().GetEmptyIndex();
 	DWORD dwEffectCRC = ms_adwCRCAffectEffect[iEffectIndex];
 	CEffectManager::Instance().CreateEffectInstanceWithScale(dwEffectIndex, dwEffectCRC,
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	NULL,
-#endif
 	fScale);
 	CEffectManager::Instance().SelectEffectInstance(dwEffectIndex);
 	CEffectManager::Instance().SetEffectInstanceGlobalMatrix(c_rmatGlobal);
@@ -1254,64 +1251,6 @@ void CInstanceBase::__DetachEffect(DWORD dwEID)
 
 DWORD CInstanceBase::__AttachEffect(UINT eEftType, float fScale)
 {
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	switch (eEftType)
-	{
-		case EFFECT_AFFECT + AFFECT_GONGPO:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/sura/effect/fear_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_JUMAGAP:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/sura/effect/jumagap_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_HOSIN:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/shaman/effect/3hosin_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_BOHO:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/shaman/effect/boho_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_KWAESOK:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/shaman/effect/10kwaesok_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_HEUKSIN:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/sura/effect/heuksin_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_MUYEONG:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/sura/effect/muyeong_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_FIRE:
-			RegisterEffect(eEftType, "Bip01", "d:/ymir work/effect/hit/blow_flame/flame_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_GICHEON:
-			RegisterEffect(eEftType, "Bip01 R Hand", "d:/ymir work/pc/shaman/effect/6gicheon_hand.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_JEUNGRYEOK:
-			RegisterEffect(eEftType, "Bip01 L Hand", "d:/ymir work/pc/shaman/effect/jeungryeok_hand.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_PABEOP:
-			RegisterEffect(eEftType, "Bip01 Head", "d:/ymir work/pc/sura/effect/pabeop_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_CHEONGEUN:
-		case EFFECT_AFFECT + AFFECT_FALLEN_CHEONGEUN:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/warrior/effect/gyeokgongjang_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_GWIGEOM:
-			RegisterEffect(eEftType, "Bip01 R Finger2", "d:/ymir work/pc/sura/effect/gwigeom_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_AFFECT + AFFECT_GYEONGGONG:
-			RegisterEffect(eEftType, "", "d:/ymir work/pc/assassin/effect/gyeonggong_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_WEAPON + WEAPON_ONEHAND:
-			RegisterEffect(eEftType, "equip_right_hand", "d:/ymir work/pc/warrior/effect/geom_sword_loop.mse", false, GetNameString());
-			break;
-		case EFFECT_WEAPON + WEAPON_TWOHAND:
-			RegisterEffect(eEftType, "equip_right_hand", "d:/ymir work/pc/warrior/effect/geom_spear_loop.mse", false, GetNameString());
-			break;
-		default:
-			break;
-	}
-#endif
-
 	// 2004.07.17.levites.isShow를 ViewFrustumCheck로 변경
 #ifdef ENABLE_CANSEEHIDDENTHING_FOR_GM
 	if (IsAffect(AFFECT_INVISIBILITY) && !__MainCanSeeHiddenThing())
@@ -1324,23 +1263,9 @@ DWORD CInstanceBase::__AttachEffect(UINT eEftType, float fScale)
 	if (eEftType>=EFFECT_NUM)
 		return 0;
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	DWORD * dwSkillColor = 
-#ifdef USE_NEW_GYEONGGONG_SKILL
-	eEftType == EFFECT_GYEONGGONG_BOOM ? m_GraphicThingInstance.GetSkillColorByEffectID(EFFECT_AFFECT + AFFECT_GYEONGGONG) : m_GraphicThingInstance.GetSkillColorByEffectID(eEftType);
-#else
-	m_GraphicThingInstance.GetSkillColorByEffectID(eEftType)
-#endif
-	;
-#endif
-
 	if (ms_astAffectEffectAttachBone[eEftType].empty())
 	{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		return m_GraphicThingInstance.AttachEffectByID(0, NULL, ms_adwCRCAffectEffect[eEftType], (const D3DXVECTOR3*)NULL, dwSkillColor, fScale);
-#else
 		return m_GraphicThingInstance.AttachEffectByID(0, NULL, ms_adwCRCAffectEffect[eEftType], (const D3DXVECTOR3*)NULL, fScale);
-#endif
 	}
 	else
 	{
@@ -1352,31 +1277,19 @@ DWORD CInstanceBase::__AttachEffect(UINT eEftType, float fScale)
 		{
 			if (m_GraphicThingInstance.GetAttachingBoneName(CRaceData::PART_WEAPON, &c_szBoneName))
 			{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-				return m_GraphicThingInstance.AttachEffectByID(0, c_szBoneName, ms_adwCRCAffectEffect[eEftType], NULL, dwSkillColor);
-#else
 				return m_GraphicThingInstance.AttachEffectByID(0, c_szBoneName, ms_adwCRCAffectEffect[eEftType]);
-#endif
 			}
 		}
 		else if (0 == rstrBoneName.compare("PART_WEAPON_LEFT"))
 		{
 			if (m_GraphicThingInstance.GetAttachingBoneName(CRaceData::PART_WEAPON_LEFT, &c_szBoneName))
 			{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-				return m_GraphicThingInstance.AttachEffectByID(0, c_szBoneName, ms_adwCRCAffectEffect[eEftType], NULL, dwSkillColor);
-#else
 				return m_GraphicThingInstance.AttachEffectByID(0, c_szBoneName, ms_adwCRCAffectEffect[eEftType]);
-#endif
 			}
 		}
 		else
 		{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			return m_GraphicThingInstance.AttachEffectByID(0, rstrBoneName.c_str(), ms_adwCRCAffectEffect[eEftType], (const D3DXVECTOR3*)NULL, dwSkillColor);
-#else
 			return m_GraphicThingInstance.AttachEffectByID(0, rstrBoneName.c_str(), ms_adwCRCAffectEffect[eEftType], (const D3DXVECTOR3*)NULL, fScale);
-#endif
 		}
 	}
 
@@ -1403,11 +1316,7 @@ void CInstanceBase::__ComboProcess()
 	*/
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-bool CInstanceBase::RegisterEffect(UINT eEftType, const char* c_szEftAttachBone, const char* c_szEftName, bool isCache, const char * name)
-#else
 bool CInstanceBase::RegisterEffect(UINT eEftType, const char* c_szEftAttachBone, const char* c_szEftName, bool isCache)
-#endif
 {
 	if (eEftType>=EFFECT_NUM)
 		return false;
@@ -1415,11 +1324,7 @@ bool CInstanceBase::RegisterEffect(UINT eEftType, const char* c_szEftAttachBone,
 	ms_astAffectEffectAttachBone[eEftType]=c_szEftAttachBone;
 
 	DWORD& rdwCRCEft=ms_adwCRCAffectEffect[eEftType];
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	if (!CEffectManager::Instance().RegisterEffect2(c_szEftName, &rdwCRCEft, isCache, name))
-#else
 	if (!CEffectManager::Instance().RegisterEffect2(c_szEftName, &rdwCRCEft, isCache))
-#endif
 	{
 		TraceError("CInstanceBase::RegisterEffect(eEftType=%d, c_szEftAttachBone=%s, c_szEftName=%s, isCache=%d) - Error", eEftType, c_szEftAttachBone, c_szEftName, isCache);
 		rdwCRCEft=0;
@@ -1469,23 +1374,3 @@ bool CInstanceBase::RegisterTitleColor(UINT uIndex, UINT r, UINT g, UINT b)
 	g_akD3DXClrTitle[uIndex]=__RGBToD3DXColoru(r, g, b);
 	return true;
 }
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-bool CInstanceBase::RegisterEffectNormal(UINT eEftType, const char* c_szEftAttachBone, const char* c_szEftName, bool isCache)
-{
-	if (eEftType >= EFFECT_NUM)
-		return false;
-
-	ms_astAffectEffectAttachBone[eEftType] = c_szEftAttachBone;
-
-	DWORD& rdwCRCEft = ms_adwCRCAffectEffect[eEftType];
-	if (!CEffectManager::Instance().RegisterEffect2(c_szEftName, &rdwCRCEft, isCache, false))
-	{
-		TraceError("CInstanceBase::RegisterEffect(eEftType=%d, c_szEftAttachBone=%s, c_szEftName=%s, isCache=%d) - Error", eEftType, c_szEftAttachBone, c_szEftName, isCache);
-		rdwCRCEft = 0;
-		return false;
-	}
-
-	return true;
-}
-#endif

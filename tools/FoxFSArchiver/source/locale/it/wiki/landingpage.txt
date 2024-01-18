@@ -1,0 +1,38 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner.tga]
+[CENTER_ALIGN;FONT_SIZE=24]TI INVITIAMO A LEGGERE E A RISPETTARE
+[CENTER_ALIGN;FONT_SIZE=24]IL REGOLAMENTO DI GIOCO PER EVITARE
+[CENTER_ALIGN;FONT_SIZE=24]EVENTUALI PROBLEMI.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. VENDITA DI ACCOUNT E ITEM
+[X_PADDING=20]Non è consentito la vendita di accounts e item in beni reali (paysafe, paypall, bitcoin , sofrot ecc.) è
+[X_PADDING=20]severamente vietato, inoltre non è consentito scambi di accounts e del suo contenuto con altri server.
+
+[X_PADDING=12]2. LINGUAGGIO OFFENSIVO
+[X_PADDING=20]E' vietato insultare tramite messaggi o altri strumenti del gioco, gli altri giocatori. E' altresì vietato l'uso
+[X_PADDING=20]di un linguaggio non consono al tema del gioco, quale ad esempio turpiloquio, bestemmie, minacce al di fuori del
+[X_PADDING=20]gioco. Gli insulti diretti allo staff portano al permban immediato dell'account. I provvedimenti vengono valutati
+[X_PADDING=20]in base della cosa.
+
+[X_PADDING=12]3. BUG
+[X_PADDING=20]Invitiamo a tutti gli utenti di segnalare immediatamente un bug riscontrato ad un membro dello staff.
+[X_PADDING=20]Qualsiasi tipo di utilizzo o abuso di bug che va a danneggiare il normale svolgimento del gioco è punito.
+
+[X_PADDING=12]4. CHEATING
+[X_PADDING=20]Non è consentito l'uso di hack/bot o qualsiasi altro software illegale.
+[X_PADDING=20]Ogni tentativo verrà punito con il blocco permanente.
+
+[X_PADDING=12]5. SICUREZZA ACCOUNT E INFORMAZIONI PRIVATE
+[X_PADDING=20]Lo staff di EMPIREMMORPG non si assume nessuna responsabilità nel caso in cui per via d'uso di terzi parti si perdono
+[X_PADDING=20]account o item. Ti consigliamo di non condividere con nessuno i tuoi dati. Inoltre ti consigliamo di non
+[X_PADDING=20]fornire le tue informazioni private a nessuno. Nel caso che qualcuno divulga informazioni private di
+[X_PADDING=20]altra persona lo staff provvederà a punirlo.
+
+[X_PADDING=12]6. PUBBLICITA'
+[X_PADDING=20]Non è consentito pubblicizzare altri server sul nostro server Discord o in gioco, tale regola se infranta si
+[X_PADDING=20]rischia una punizione.
+
+[X_PADDING=12]7. MEMBRI DELLO STAFF
+[X_PADDING=20]Invitiamo a tutti gli utenti di seguire e rispettare le scelte e istruzioni dello staff.
+[X_PADDING=20]Se tale regola viene infranta si rischia una punizione.

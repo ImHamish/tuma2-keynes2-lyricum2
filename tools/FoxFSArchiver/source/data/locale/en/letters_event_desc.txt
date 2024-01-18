@@ -1,0 +1,7 @@
+[DELAY value;0]
+LETTERS EVENT[ENTER]
+Kill monsters and you will recieve some letters.[ENTER]
+Collect all the necessary pieces to form the word:[ENTER]
+Tuma2. After making the word, you will be able[ENTER]
+to redeem the prize.[ENTER]
+Good luck!

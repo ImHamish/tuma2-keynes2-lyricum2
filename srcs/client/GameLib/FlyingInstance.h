@@ -3,10 +3,6 @@
 #include "FlyTarget.h"
 #include "ActorInstanceInterface.h"
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	#include "../UserInterface/GameType.h"
-#endif
-
 class CFlyingData;
 class CFlyTrace;
 class IFlyEventHandler;
@@ -72,14 +68,6 @@ protected:
 	void __SetDataPointer(CFlyingData * pData, const D3DXVECTOR3 & v3StartPosition);
 	void __SetTargetDirection(const CFlyTarget& c_rkTarget);
 	void __SetTargetNormalizedDirection(const D3DXVECTOR3 & v3NormalizedDirection ); // 시작 타겟 방향 설정
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	public:
-		void	SetSkillColor(DWORD *dwSkillColor) { memcpy(m_dwSkillColor, dwSkillColor, sizeof(m_dwSkillColor)); }
-
-	protected:
-		DWORD	m_dwSkillColor[ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
 
 protected:
 

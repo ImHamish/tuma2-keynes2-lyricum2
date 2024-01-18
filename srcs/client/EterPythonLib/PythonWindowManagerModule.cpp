@@ -2520,7 +2520,6 @@ PyObject * wndMgrShowOverInWindowName(PyObject * poSelf, PyObject * poArgs)
 	return Py_BuildNone();
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
 PyObject * wndMgrGetRealMousePosition(PyObject * poSelf, PyObject * poArgs)
 {
 	POINT kCursorPos;
@@ -2560,10 +2559,7 @@ PyObject * wndMgrGetColorAtPosition(PyObject * poSelf, PyObject * poArgs)
 
 	return Py_BuildValue("iii", bRed, bGreen, bBlue);
 }
-#endif
 
-
-// #if app.ENABLE_SKILL_COLOR_SYSTEM
 PyObject* wndButtonEnableFlash(PyObject* poSelf, PyObject* poArgs)
 {
 	UI::CWindow* pWindow;
@@ -3654,12 +3650,9 @@ void initwndMgr()
 		// For Debug
 		{ "SetOutlineFlag",				wndMgrSetOutlineFlag,				METH_VARARGS },
 		{ "ShowOverInWindowName",		wndMgrShowOverInWindowName,			METH_VARARGS },
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
 		{ "GetRealMousePosition",		wndMgrGetRealMousePosition,			METH_VARARGS },
 		{ "GetColorAtPosition",			wndMgrGetColorAtPosition,			METH_VARARGS },
-#endif
 
-// #if app.ENABLE_SKILL_COLOR_SYSTEM
 		{ "EnableFlash", wndButtonEnableFlash, METH_VARARGS},
 		{ "DisableFlash", wndButtonDisableFlash, METH_VARARGS},
 #ifdef ENABLE_UI_EXTRA

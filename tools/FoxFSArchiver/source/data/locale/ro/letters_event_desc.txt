@@ -1,0 +1,6 @@
+[DELAY value;0]
+EVENT LITERE[ENTER]
+Omoarã monºtri ºi vei primi litere. Adunã toate[ENTER]
+piesele necesare pentru a forma cuvântul: Tuma2.[ENTER]
+Dupã ce ai format cuvântul, îþi poþi revedinca premiul.[ENTER]
+Spor!

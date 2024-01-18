@@ -656,19 +656,6 @@ BYTE CInstanceBase::GetGuildLeaderGradeType()
 	return 2;
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-DWORD* CInstanceBase::GetSkillColor(DWORD dwSkillIndex)
-{
-	DWORD dwSkillSlot = dwSkillIndex + 1;
-	CPythonSkill::SSkillData* c_pSkillData;
-	if (!CPythonSkill::Instance().GetSkillData(dwSkillSlot, &c_pSkillData))
-		return 0;
-
-	WORD dwEffectID = c_pSkillData->GradeData[CPythonSkill::SKILL_GRADE_COUNT].wMotionIndex - CRaceMotionData::NAME_SKILL - (1 * 25);
-
-	return m_GraphicThingInstance.GetSkillColorByMotionID(dwEffectID);
-}
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 BYTE CInstanceBase::GetPremiumPlayer()
 {
@@ -1040,11 +1027,6 @@ bool CInstanceBase::Create(const SCreateData& c_rkCreateData
 
 	__Create_SetName(c_rkCreateData);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	ChangeSkillColor(*c_rkCreateData.m_dwSkillColor);
-	memcpy(m_dwSkillColor, *c_rkCreateData.m_dwSkillColor, sizeof(m_dwSkillColor));
-#endif
-
 #if defined(WJ_SHOW_MOB_INFO) && defined(ENABLE_SHOW_MOBLEVEL)
 	if (IsEnemy() && CPythonSystem::Instance().IsShowMobLevel())
 		m_dwLevel = CPythonNonPlayer::Instance().GetMonsterLevel(GetRace());
@@ -1175,63 +1157,6 @@ bool CInstanceBase::Create(const SCreateData& c_rkCreateData
 
 	return true;
 }
-
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CInstanceBase::ChangeSkillColor(const DWORD *dwSkillColor)
-{
-	DWORD tmpdwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-	memcpy(tmpdwSkillColor, dwSkillColor, sizeof(tmpdwSkillColor));
-
-	DWORD skill[CRaceMotionData::SKILL_NUM][ESkillColorLength::MAX_EFFECT_COUNT];
-	memset(skill, 0, sizeof(skill));
-
-	for (int i = 0; i < 8; ++i)
-	{
-		for (int t = 0; t < ESkillColorLength::MAX_SKILL_COUNT; ++t)
-		{
-			for (int x = 0; x < ESkillColorLength::MAX_EFFECT_COUNT; ++x)
-			{
-				skill[i * 10 + i*(ESkillColorLength::MAX_SKILL_COUNT - 1) + t + 1][x] = *(dwSkillColor++);
-			}
-		}
-		dwSkillColor -= ESkillColorLength::MAX_SKILL_COUNT * ESkillColorLength::MAX_EFFECT_COUNT;
-	}
-
-	for (int i = BUFF_BEGIN; i < MAX_SKILL_COUNT + MAX_BUFF_COUNT; i++)
-	{
-		BYTE id = 0;
-		switch (i)
-		{
-			case BUFF_BEGIN+0:
-				id = 94;
-				break;
-			case BUFF_BEGIN + 1:
-				id = 95;
-				break;
-			case BUFF_BEGIN + 2:
-				id = 96;
-				break;
-			case BUFF_BEGIN + 3:
-				id = 110;
-				break;
-			case BUFF_BEGIN + 4:
-				id = 111;
-				break;
-			default:
-				break;
-		}
-
-		if (id == 0)
-			continue;
-
-		for (int x = 0; x < ESkillColorLength::MAX_EFFECT_COUNT; ++x)
-			skill[id][x] = tmpdwSkillColor[i][x];
-	}
-
-	m_GraphicThingInstance.ChangeSkillColor(*skill);
-}
-#endif
 
 void CInstanceBase::__Create_SetName(const SCreateData& c_rkCreateData)
 {
@@ -4596,9 +4521,6 @@ bool CInstanceBase::SetAura(uint32_t eAura) {
 	D3DXVECTOR3 v3MeshScale = pItemData->GetAuraMeshScaleVector(byJob, bySex);
 	float fParticleScale = pItemData->GetAuraParticleScale(byJob, bySex);
 	m_auraRefineEffect = m_GraphicThingInstance.AttachEffectByID(0, "Bip01 Spine2", pItemData->GetAuraEffectID(), NULL
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, NULL
-#endif
 	, fParticleScale, &v3MeshScale);
 	m_awPart[CRaceData::PART_AURA] = eAura;
 	return true;

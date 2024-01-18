@@ -51,11 +51,7 @@ public:
 	bool RegisterFlyingData(const char* c_szFilename);
 	bool RegisterFlyingData(const char* c_szFilename, DWORD & r_dwRetCRC);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		CFlyingInstance * CreateFlyingInstanceFlyTarget(const DWORD dwID, const D3DXVECTOR3 & v3StartPosition, const CFlyTarget & cr_FlyTarget, bool canAttack, DWORD * dwSkillColor = NULL);
-#else
-		CFlyingInstance * CreateFlyingInstanceFlyTarget(const DWORD dwID, const D3DXVECTOR3 & v3StartPosition, const CFlyTarget & cr_FlyTarget, bool canAttack);
-#endif
+    CFlyingInstance * CreateFlyingInstanceFlyTarget(const DWORD dwID, const D3DXVECTOR3 & v3StartPosition, const CFlyTarget & cr_FlyTarget, bool canAttack);
 
 	void Update();
 	void Render();

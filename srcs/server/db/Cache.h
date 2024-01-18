@@ -60,15 +60,4 @@ class CItemPriceListTableCache : public cache< TItemPriceListTable >
 };
 // END_OF_MYSHOP_PRICE_LIST
 
-#ifdef __SKILL_COLOR_SYSTEM__
-class CSKillColorCache : public cache<TSkillColor>
-{
-	public:
-		CSKillColorCache();
-		virtual ~CSKillColorCache();
-
-		virtual void OnFlush();
-};
-#endif
-
 #endif

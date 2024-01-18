@@ -100,18 +100,10 @@ bool CFlyingManager::RegisterFlyingData(const char* c_szFilename, DWORD & r_dwRe
 	return true;
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-CFlyingInstance * CFlyingManager::CreateFlyingInstanceFlyTarget(const DWORD dwID,
-																const D3DXVECTOR3 & v3StartPosition,
-																const CFlyTarget & cr_FlyTarget,
-																bool canAttack,
-																DWORD * dwSkillColor)
-#else
 CFlyingInstance * CFlyingManager::CreateFlyingInstanceFlyTarget(const DWORD dwID,
 																const D3DXVECTOR3 & v3StartPosition,
 																const CFlyTarget & cr_FlyTarget,
 																bool canAttack)
-#endif
 {
 	if (m_kMap_pkFlyData.find(dwID) == m_kMap_pkFlyData.end())
 	{
@@ -120,11 +112,6 @@ CFlyingInstance * CFlyingManager::CreateFlyingInstanceFlyTarget(const DWORD dwID
 	}
 
 	CFlyingInstance * pFlyingInstance = CFlyingInstance::New();
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	if (dwSkillColor != NULL)
-		pFlyingInstance->SetSkillColor(dwSkillColor);
-#endif
 
 	pFlyingInstance->Create(m_kMap_pkFlyData[dwID], v3StartPosition, cr_FlyTarget, canAttack);
 
@@ -203,18 +190,10 @@ void CFlyingManager::CreateIndexedFly(DWORD dwIndex, CActorInstance * pStartActo
 	{
 		case INDEX_FLY_TYPE_NORMAL:
 		{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			CreateFlyingInstanceFlyTarget(rIndexFlyData.dwCRC,
-											D3DXVECTOR3(posStart.x, posStart.y, posStart.z),
-											pEndActor,
-											false,
-											pStartActor->GetSkillColorByEffectID(dwIndex));
-#else
 			CreateFlyingInstanceFlyTarget(rIndexFlyData.dwCRC,
 											D3DXVECTOR3(posStart.x, posStart.y, posStart.z),
 											pEndActor,
 											false);
-#endif
 			break;
 		}
 		case INDEX_FLY_TYPE_FIRE_CRACKER:
@@ -234,18 +213,10 @@ void CFlyingManager::CreateIndexedFly(DWORD dwIndex, CActorInstance * pStartActo
 		}
 		case INDEX_FLY_TYPE_AUTO_FIRE:
 		{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			CreateFlyingInstanceFlyTarget(rIndexFlyData.dwCRC,
-											D3DXVECTOR3(posStart.x, posStart.y, posStart.z + 100.0f),
-											pEndActor,
-											false,
-											pStartActor->GetSkillColorByEffectID(dwIndex));
-#else
 			CreateFlyingInstanceFlyTarget(rIndexFlyData.dwCRC,
 											D3DXVECTOR3(posStart.x, posStart.y, posStart.z + 100.0f),
 											pEndActor,
 											false);
-#endif
 			break;
 		}
 	}

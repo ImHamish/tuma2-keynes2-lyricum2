@@ -1,0 +1,38 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner.tga]
+[CENTER_ALIGN;FONT_SIZE=24]WE INVITE YOU TO READ AND FOLLOW
+[CENTER_ALIGN;FONT_SIZE=24]FOLLOW THE GAME RULES TO 
+[CENTER_ALIGN;FONT_SIZE=24]AVOID ANY PROBLEMS.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. SALE OF ACCOUNTS AND ITEMS
+[X_PADDING=20]The sale of accounts and items for real assets (like: paysafe, paypall, bitcoin, sofrot, etc.)
+[X_PADDING=20]is not allowed. It is strictly forbidden, moreover it is not allowed to exchange with other servers.
+
+[X_PADDING=12]2. OFFENSIVE LANGUAGE
+[X_PADDING=20]It is strictly forbidden to insult other players. It is also forbidden to use a language not suited to the theme
+[X_PADDING=20]of the game, such as: foul language, blasphemies, threats outside the game. Insults directed at the staff lead to 
+[X_PADDING=20]lead to the immediate permanent block of the game & forum account. (The measures are evaluated based on the seriousness of the thing.)
+[X_PADDING=20]seriousness of the thing.)
+
+[X_PADDING=12]3. BUG
+[X_PADDING=20]We encourage all users to immediately report any bug fonded to a staff member.
+[X_PADDING=20]Any kind of use or abuse of bug that affect the normal course of the game will be punished.
+
+[X_PADDING=12]4. CHEATING
+[X_PADDING=20]The use of hacks/bots or any other illegal software is not allowed.
+[X_PADDING=20]Any attempt will be punished with the permanent block.
+
+[X_PADDING=12]5. ACCOUNT SECURITY AND PRIVATE INFORMATIONS
+[X_PADDING=20]Keynes2 staff assumes no responsibility in case of account or item loss due to account sharing.
+[X_PADDING=20](We highly recommend you to not share your accounts/items.)
+[X_PADDING=20]We also advise you not to share your private informations with anyone.
+[X_PADDING=20](In-case that someone divulges another user informations, the staff will punish him.)
+
+[X_PADDING=12]6. ADVERTISING
+[X_PADDING=20]Any attempt to advertise other servers on our Game or Discord server will be punished.
+[X_PADDING=20]will be punished.
+
+[X_PADDING=12]7. STAFF MEMBERS
+[X_PADDING=20]We invite all our users to follow and respect the choices and instructions of the staff.
+[X_PADDING=20]If this rule is broken there is a risk of severe punishment.

@@ -93,47 +93,6 @@ DWORD GetCRC32(const char * buf, size_t len)
 #define DO8CI(buf, i)   DO4CI(buf, i); DO4CI(buf, i + 4);
 #define DO16CI(buf, i)  DO8CI(buf, i); DO8CI(buf, i + 8);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-DWORD GetCaseCRC32(const char * buf, size_t len, const char * name)
-
-{
-	char * rez = (char *)buf;
-	if (name != NULL)
-	{
-		rez = (char *)malloc(1 + strlen(buf) + strlen(name));
-		strcpy(rez, name);
-		strcat(rez, buf);
-	}
-	int lenSt = strlen(rez);
-	len = strlen(rez);
-
-	DWORD crc = 0xffffffff;
-	if (16 <= len)
-	{
-		do
-		{
-			DO16CI(rez, 0);
-
-			rez += 16;
-			len -= 16;
-		} while (len >= 16);
-	}
-
-	if (0 != len)
-	{
-		do
-		{
-			DO1CI(rez, 0);
-
-			++rez;
-			--len;
-		} while (len > 0);
-	}
-	crc ^= 0xffffffff;
-
-	return crc;
-}
-
 DWORD GetCaseCRC32(const char * buf, size_t len)
 {
 	DWORD crc = 0xffffffff;
@@ -163,7 +122,6 @@ DWORD GetCaseCRC32(const char * buf, size_t len)
 	crc ^= 0xffffffff;
 	return crc;
 }
-#endif
 
 DWORD GetHFILECRC32(HANDLE hFile)
 {

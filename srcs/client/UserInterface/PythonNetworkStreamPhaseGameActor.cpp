@@ -211,9 +211,6 @@ bool CPythonNetworkStream::RecvCharacterAdditionalInfo()
 #endif
 		kNetActorData.m_country_flag = chrInfoPacket.country_flag;
 		kNetActorData.m_dwMountVnum=chrInfoPacket.dwMountVnum;
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		memcpy(kNetActorData.m_dwSkillColor, chrInfoPacket.dwSkillColor, sizeof(kNetActorData.m_dwSkillColor));
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 		kNetActorData.m_byPremium = chrInfoPacket.byPremium;
 		kNetActorData.m_iPremiumTime = chrInfoPacket.iPremiumTime;
@@ -313,9 +310,6 @@ bool CPythonNetworkStream::RecvCharacterUpdatePacket()
 	kNetUpdateActorData.m_byPKMode=chrUpdatePacket.bPKMode;
 	kNetUpdateActorData.m_dwStateFlags=chrUpdatePacket.bStateFlag;
 	kNetUpdateActorData.m_dwMountVnum=chrUpdatePacket.dwMountVnum;
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	memcpy(kNetUpdateActorData.m_dwSkillColor, chrUpdatePacket.dwSkillColor, sizeof(kNetUpdateActorData.m_dwSkillColor));
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 	kNetUpdateActorData.m_byPremium = chrUpdatePacket.byPremium;
 	kNetUpdateActorData.m_iPremiumTime = chrUpdatePacket.iPremiumTime;

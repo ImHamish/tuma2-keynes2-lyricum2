@@ -91,12 +91,6 @@ std::string CPythonConfig::GetClassNameByType(EClassTypes eType) const
 	case CLASS_OPTION:
 		return "OPTION";
 		break;
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	case CLASS_SKILL_COLOR:
-		return "SKILL_COLOR";
-		break;
-#endif
 	}
 
 	TraceError("unkown class type %u", eType);

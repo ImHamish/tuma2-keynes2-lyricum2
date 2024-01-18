@@ -33,13 +33,6 @@ enum QID
 	QID_ITEMPRICE_DESTROY,		///< 22, 아이템 가격정보 삭제 쿼리
 	QID_ITEMPRICE_LOAD_FOR_UPDATE,	///< 23, 가격정보 업데이트를 위한 아이템 가격정보 로드 쿼리
 	QID_ITEMPRICE_LOAD,			///< 24, 아이템 가격정보 로드 쿼리
-#ifdef __SKILL_COLOR_SYSTEM__
-	QID_SKILL_COLOR,
-	QID_SKILL_COLOR_SAVE,
-#endif
-
-
-	
 #ifdef __ENABLE_NEW_OFFLINESHOP__
 	QID_OFFLINESHOP_ADD_ITEM,
 	QID_OFFLINESHOP_EDIT_ITEM,

@@ -58,10 +58,6 @@ enum
 	HEADER_CG_ADD_FLY_TARGETING			= 53,
 	HEADER_CG_SHOOT				= 54,
 	HEADER_CG_MYSHOP				= 55,
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	HEADER_CG_SKILL_COLOR			= 56,
-#endif
 #ifdef ENABLE_OPENSHOP_PACKET
 	HEADER_CG_OPENSHOP = 57,
 #endif
@@ -1083,11 +1079,6 @@ typedef struct packet_char_additional_info
 	BYTE 	byPremium;
 	long int iPremiumTime;
 #endif
-	
-#ifdef __SKILL_COLOR_SYSTEM__
-	DWORD	dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + ESkillColorLength::MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
-
 	char country_flag[3 + 1];
 	BYTE bGuildLeaderGrade;
 } TPacketGCCharacterAdditionalInfo;
@@ -1111,9 +1102,6 @@ typedef struct packet_update_char
 #ifdef __ENABLE_PREMIUM_PLAYERS__
 	BYTE 	byPremium;
 	long int iPremiumTime;
-#endif
-#ifdef __SKILL_COLOR_SYSTEM__
-	DWORD	dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + ESkillColorLength::MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
 #endif
 	BYTE bGuildLeaderGrade;
 } TPacketGCCharacterUpdate;
@@ -2940,19 +2928,6 @@ typedef struct packet_receive_cube_renewal
 	BYTE subheader;
 	TInfoDateCubeRenewal date_cube_renewal;
 }TPacketGCCubeRenewalReceive;
-#endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-typedef struct packet_skill_color
-{
-	BYTE		bheader;
-	BYTE		skill;
-	DWORD		col1;
-	DWORD		col2;
-	DWORD		col3;
-	DWORD		col4;
-	DWORD		col5;
-} TPacketCGSkillColor;
 #endif
 
 #ifdef ENABLE_ATLAS_BOSS

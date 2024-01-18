@@ -1,0 +1,37 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner.tga]
+[CENTER_ALIGN;FONT_SIZE=24]TE INVITAM SA CITEªTI ªI SA RESPECTÞI
+[CENTER_ALIGN;FONT_SIZE=24]REGULILE JOCULUI PENTRU A
+[CENTER_ALIGN;FONT_SIZE=24]EVITA EVENTUALE PROBLEME.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. VÂNZAREA DE CONT-URI ªI ITEME
+[X_PADDING=20] Vânzarea de cont-uri ºi iteme pe bani\bunuri reale (paysafe, paypall, bitcoin, sofrot etc.) nu este permisã. Pe
+[X_PADDING=20]lânga asta schimbul de cont-uri ºi iteme cu alte servere nu este permisã sub nici o formã.
+
+[X_PADDING=12]2. LIMBAJ OFENSIV
+[X_PADDING=20]Insultarea altor jucãtori prin mesaje sau alte modalitãþi ce þin de joc nu este permisã. De asemenea,
+[X_PADDING=20]este interzisã utilizarea unui limbaj inadecvat cum ar fi blasfemii, limba urât, ameninþãri, etc.
+[X_PADDING=20]Insultele aduse cãtre un membru al staff-ului vor fi pedepsite imediat aducând la banarea contului.
+[X_PADDING=20]Mãsurile luate vor fi evoluate în baza gravitãþii.
+
+[X_PADDING=12]3. BUG
+[X_PADDING=20]Încurajãm toþi jucãtorii sã raporteze unui membru din staff imediat orice bug gãsit.
+[X_PADDING=20]Orice fel de utilizare sau abuz de bug-uri care afecteazã normalitatea jocului va fi pedepsitã.
+
+[X_PADDING=12]4. CHEATING
+[X_PADDING=20]Utilizarea de hack/boþi nu este permisã.
+[X_PADDING=20]Orice tentativã de utilizare va fi pedepsitã cu banarea permanentã.
+
+[X_PADDING=12]5. SECURITATEA CONTULUI ªI INFORMAÞIILE PRIVATE
+[X_PADDING=20]Staff-ul Keynes2 nu îºi asumã nici o responsabilitate în cazul în care vei pierde cont-ul sau iteme din cauza 
+[X_PADDING=20]sharing-ului de cont. Îþi recomandãm sã þii doar pentru tine datele de logare. În cazul în care cineva va
+[X_PADDING=20]împãrtãºi datele de acces, acesta va fi pedepsit de cãtre staff.
+
+[X_PADDING=12]6. RECLAMA
+[X_PADDING=20]Nu este permisã sub nici o formã reclama altor servere, în cazul în care aceastã regula va fi încãlcatã
+[X_PADDING=20]vei risca o pedeapsã.
+
+[X_PADDING=12]7. MEMBRII STAFF-ULUI
+[X_PADDING=20]Te invitãm sã respecþi ºi sã urmezi cerinþele oricãrui membru din staff.
+[X_PADDING=20]în cazul în care aceastã regula va fi încãlcatã vei risca o pedeapsã.

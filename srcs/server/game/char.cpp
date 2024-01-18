@@ -546,11 +546,6 @@ void CHARACTER::Initialize()
 #endif
 
 	m_stName = "";
-
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	memset(&m_dwSkillColor, 0, sizeof(m_dwSkillColor));
-#endif
 #ifdef ENABLE_ACCE_SYSTEM
 	m_bAcceCombination	= false;
 	m_bAcceAbsorption	= false;
@@ -1267,9 +1262,7 @@ void CHARACTER::EncodeInsertPacket(LPENTITY entity) {
 			addPacket.byPremium = m_byPremium;
 			addPacket.iPremiumTime = m_iPremiumTime;
 #endif
-#ifdef __SKILL_COLOR_SYSTEM__
-			memcpy(addPacket.dwSkillColor, GetSkillColor(), sizeof(addPacket.dwSkillColor));
-#endif
+
 			if (GetGuild() != NULL)
 			{
 				addPacket.dwGuildID = GetGuild()->GetID();
@@ -1394,9 +1387,6 @@ void CHARACTER::UpdatePacket()
 #endif
 #if defined(ENABLE_AURA_SYSTEM)
 	pack.awPart[CHR_EQUIPPART_AURA] = GetPart(PART_AURA);
-#endif
-#ifdef __SKILL_COLOR_SYSTEM__
-	memcpy(pack.dwSkillColor, GetSkillColor(), sizeof(pack.dwSkillColor));
 #endif
 
 	pack.bMovingSpeed	= GetLimitPoint(POINT_MOV_SPEED);
@@ -10527,13 +10517,6 @@ int CHARACTER::GetSoulItemDamage(LPCHARACTER pkVictim, int iDamage, BYTE bSoulTy
 	}
 	
 	return iDamageAdd;
-}
-#endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-void CHARACTER::SetSkillColor(DWORD * dwSkillColor) {
-	memcpy(m_dwSkillColor, dwSkillColor, sizeof(m_dwSkillColor));
-	UpdatePacket();
 }
 #endif
 

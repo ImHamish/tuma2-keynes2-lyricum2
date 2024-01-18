@@ -194,11 +194,7 @@ void CEffectInstance::__SetLightData(CLightData* pData)
 	m_LightInstanceVector.push_back(pInstance);
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CEffectInstance::SetEffectDataPointer(CEffectData * pEffectData, DWORD * dwSkillColor, DWORD EffectID)
-#else
 void CEffectInstance::SetEffectDataPointer(CEffectData * pEffectData)
-#endif
 {
 	m_isAlive=true;
 
@@ -216,46 +212,6 @@ void CEffectInstance::SetEffectDataPointer(CEffectData * pEffectData)
 	for (i = 0; i < pEffectData->GetParticleCount(); ++i)
 	{
 		CParticleSystemData * pParticle = pEffectData->GetParticlePointer(i);
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		if (dwSkillColor != NULL)
-		{
-			DWORD skill;
-
-			if (i >= 5)
-				skill = dwSkillColor[4];
-			else
-				skill = dwSkillColor[i];
-
-			CParticleProperty* prob = pParticle->GetParticlePropertyPointer();
-			if (skill != 99999999 && skill != 0)
-			{
-				D3DXCOLOR c = D3DXCOLOR(skill);
-				D3DXCOLOR d;
-				for (TTimeEventTableColor::iterator it = prob->m_TimeEventColor.begin(); it != prob->m_TimeEventColor.end(); ++it)
-				{
-					d = D3DXCOLOR(it->m_Value.m_dwColor);
-					c.a = d.a;
-					it->m_Value.m_dwColor = (DWORD)c;
-				}
-			}
-			else if (skill == 0)
-			{
-				CParticleProperty* prob_backup = pParticle->GetParticlePropertyBackupPointer();
-				for (TTimeEventTableColor::iterator it = prob->m_TimeEventColor.begin(); it != prob->m_TimeEventColor.end(); ++it)
-					it->m_Value.m_dwColor = prob_backup->m_TimeEventColor[distance(prob->m_TimeEventColor.begin(), it)].m_Value.m_dwColor;
-			}
-			/*
-			else if (skill == 99999999) // black
-			{
-				prob->m_byBillboardType = 0;
-				prob->m_byRotationType = 0;
-				prob->m_byColorOperationType = 0;
-			}
-			*/
-		}
-#endif
-
 		__SetParticleData(pParticle);
 	}
 

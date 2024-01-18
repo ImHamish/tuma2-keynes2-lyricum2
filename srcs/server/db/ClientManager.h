@@ -22,10 +22,6 @@ class CPlayerTableCache;
 class CItemCache;
 class CItemPriceListTableCache;
 
-#ifdef __SKILL_COLOR_SYSTEM__
-class CSKillColorCache;
-#endif
-
 class CPacketInfo
 {
     public:
@@ -47,10 +43,6 @@ class CClientManager : public CNetBase, public singleton<CClientManager>
 	typedef std::unordered_map<DWORD, TItemCacheSet *> TItemCacheSetPtrMap;
 	typedef std::unordered_map<DWORD, CItemPriceListTableCache*> TItemPriceListCacheMap;
 	typedef std::unordered_map<short, BYTE> TChannelStatusMap;
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	typedef std::unordered_map<DWORD, CSKillColorCache *> TSkillColorCacheMap;
-#endif
 
 #if defined(ENABLE_INGAME_ITEMSHOP)
 	protected:
@@ -147,12 +139,6 @@ class CClientManager : public CNetBase, public singleton<CClientManager>
 	CItemCache *		GetItemCache(DWORD id);
 	void			PutItemCache(TPlayerItem * pNew, bool bSkipQuery = false);
 	bool			DeleteItemCache(DWORD id);
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	CSKillColorCache*	GetSkillColorCache(DWORD id);
-	void				PutSkillColorCache(const TSkillColor* pNew);
-	void				UpdateSkillColorCache();
-#endif
 
 	void			UpdatePlayerCache();
 	void			UpdateItemCache();
@@ -285,11 +271,6 @@ class CClientManager : public CNetBase, public singleton<CClientManager>
 	// @fixme402 (RESULT_AFFECT_LOAD +dwRealPID)
 	void		RESULT_AFFECT_LOAD(CPeer * pkPeer, MYSQL_RES * pRes, DWORD dwHandle, DWORD dwRealPID);
 
-#ifdef __SKILL_COLOR_SYSTEM__
-	void		QUERY_SKILL_COLOR_LOAD(CPeer * peer, DWORD dwHandle, TPlayerLoadPacket * packet);
-	void		RESULT_SKILL_COLOR_LOAD(CPeer * peer, MYSQL_RES * pRes, DWORD dwHandle);
-#endif
-
 	// PLAYER_INDEX_CREATE_BUG_FIX
 	void		RESULT_PLAYER_INDEX_CREATE(CPeer *pkPeer, SQLMsg *msg);
 	// END_PLAYER_INDEX_CREATE_BUG_FIX
@@ -323,10 +304,6 @@ class CClientManager : public CNetBase, public singleton<CClientManager>
 	void		__RESULT_PLAYER_DELETE(CPeer * peer, SQLMsg* msg);
 
 	void		QUERY_PLAYER_COUNT(CPeer * pkPeer, TPlayerCountPacket *);
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	void		QUERY_SKILL_COLOR_SAVE(const char * c_pData);
-#endif
 
 	void		QUERY_ITEM_SAVE(CPeer * pkPeer, const char * c_pData);
 	void		QUERY_ITEM_DESTROY(CPeer * pkPeer, const char * c_pData);
@@ -504,10 +481,6 @@ class CClientManager : public CNetBase, public singleton<CClientManager>
 
 	TItemCacheMap				m_map_itemCache;  // 아이템 id가 key
 	TItemCacheSetPtrMap			m_map_pkItemCacheSetPtr;  // 플레이어 id가 key, 이 플레이어가 어떤 아이템 캐쉬를 가지고 있나?
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	TSkillColorCacheMap			m_map_SkillColorCache;
-#endif
 
 	// MYSHOP_PRICE_LIST
 	/// 플레이어별 아이템 가격정보 리스트 map. key: 플레이어 ID, value: 가격정보 리스트 캐시

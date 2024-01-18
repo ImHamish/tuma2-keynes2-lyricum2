@@ -21,7 +21,6 @@
 #define ENABLE_BUY_WITH_ITEM
 #define ENABLE_SOUL_SYSTEM
 #define ATTR_LOCK
-#define __SKILL_COLOR_SYSTEM__ // Skill color system
 #define __NEW_EXCHANGE_WINDOW__
 #define ENABLE_PVP_ADVANCED
 #define EQUIP_ENABLE_VIEW_SASH

@@ -3285,28 +3285,6 @@ bool CPythonNetworkStream::SendTargetPacket(DWORD dwVID)
 	return SendSequence();
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-bool CPythonNetworkStream::SendSkillColorPacket(BYTE bSkillSlot, DWORD dwColor1, DWORD dwColor2, DWORD dwColor3, DWORD dwColor4, DWORD dwColor5)
-{
-	TPacketCGSkillColor pack;
-	pack.bheader = HEADER_CG_SKILL_COLOR;
-	pack.skill = bSkillSlot;
-	pack.col1 = dwColor1;
-	pack.col2 = dwColor2;
-	pack.col3 = dwColor3;
-	pack.col4 = dwColor4;
-	pack.col5 = dwColor5;
-
-	if (!Send(sizeof(pack), &pack))
-	{
-		Tracen("Send Skill Color Packet Error");
-		return false;
-	}
-
-	return SendSequence();
-}
-#endif
-
 bool CPythonNetworkStream::SendSyncPositionElementPacket(DWORD dwVictimVID, DWORD dwVictimX, DWORD dwVictimY)
 {
 	TPacketCGSyncPositionElement kSyncPos;

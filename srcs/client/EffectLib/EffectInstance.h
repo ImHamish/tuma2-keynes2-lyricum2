@@ -40,11 +40,8 @@ class CEffectInstance : public CGraphicObjectInstance
 
 		bool LessRenderOrder(CEffectInstance* pkEftInst);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		void SetEffectDataPointer(CEffectData* pEffectData, DWORD* dwSkillColor = NULL, DWORD EffectID = 0);
-#else
 		void SetEffectDataPointer(CEffectData* pEffectData);
-#endif
+
 		CEffectData* GetEffectDataPointer() { return m_pkEftData; };
 		void Clear();
 		BOOL isAlive();

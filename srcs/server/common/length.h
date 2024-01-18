@@ -1264,19 +1264,6 @@ typedef enum
 	SHOP_COIN_TYPE_SECONDARY_COIN,
 } EShopCoinType;
 
-#ifdef __SKILL_COLOR_SYSTEM__
-namespace ESkillColorLength
-{
-	enum ESkillColorLength
-	{
-		MAX_SKILL_COUNT = 6,
-		MAX_EFFECT_COUNT = 5,
-		MAX_BUFF_COUNT = 5,
-		BUFF_BEGIN = MAX_SKILL_COUNT,
-	};
-}
-#endif
-
 #ifdef ENABLE_STOLE_REAL
 #define WEAR_COSTUME_ACCE_SLOT	18
 #else

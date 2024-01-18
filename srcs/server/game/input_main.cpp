@@ -1906,46 +1906,6 @@ void CInputMain::Move(LPCHARACTER ch, const char * data)
 	*/
 }
 
-#ifdef __SKILL_COLOR_SYSTEM__
-void CInputMain::SetSkillColor(LPCHARACTER ch, const char* pcData)
-{
-	if (!ch)
-		return;
-	
-	TPacketCGSkillColor * p = (TPacketCGSkillColor*)pcData;
-	if (p->skill >= ESkillColorLength::MAX_SKILL_COUNT)
-		return;
-	
-	if ((p->col1 != 0) || (p->col2 != 0) || (p->col3 != 0) || (p->col4 != 0) || (p->col5 != 0)) {
-		if (ch->CountSpecifyItem(164406) < 1) {
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 16, "");
-			return;
-		} else {
-			ch->RemoveSpecifyItem(164406, 1);
-		}
-	}
-	
-	DWORD data[ESkillColorLength::MAX_SKILL_COUNT + ESkillColorLength::MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-	memcpy(data, ch->GetSkillColor(), sizeof(data));
-
-	data[p->skill][0] = p->col1;
-	data[p->skill][1] = p->col2;
-	data[p->skill][2] = p->col3;
-	data[p->skill][3] = p->col4;
-	data[p->skill][4] = p->col5;
-
-	ch->ChatPacketNew(CHAT_TYPE_INFO, 15, "");
-
-	ch->SetSkillColor(data[0]);
-
-	TSkillColor db_pack;
-	memcpy(db_pack.dwSkillColor, data, sizeof(data));
-	db_pack.player_id = ch->GetPlayerID();
-	db_clientdesc->DBPacketHeader(HEADER_GD_SKILL_COLOR_SAVE, 0, sizeof(TSkillColor));
-	db_clientdesc->Packet(&db_pack, sizeof(TSkillColor));
-}
-#endif
-
 void CInputMain::Attack(LPCHARACTER ch, const BYTE header, const char* data)
 {
 	if (NULL == ch)
@@ -4873,12 +4833,6 @@ int CInputMain::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 			if (!ch->IsObserverMode())
 				UseSkill(ch, c_pData);
 			break;
-
-#ifdef __SKILL_COLOR_SYSTEM__
-		case HEADER_CG_SKILL_COLOR:
-			SetSkillColor(ch, c_pData);
-			break;
-#endif
 #ifdef ENABLE_OPENSHOP_PACKET
 		case HEADER_CG_OPENSHOP: {
 				TPacketOpenShop* p = reinterpret_cast<TPacketOpenShop*>((void*)c_pData);

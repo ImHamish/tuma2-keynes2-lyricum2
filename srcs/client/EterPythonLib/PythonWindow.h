@@ -600,7 +600,6 @@ namespace UI
 
 			void Flash();
 
-			// #if app.ENABLE_SKILL_COLOR_SYSTEM
 			void EnableFlash();
 			void DisableFlash();
 

@@ -14,10 +14,6 @@
 //#include "../eterGrnLib/ThingInstance.h"
 #include "GameLibDefines.h"
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	#include "../UserInterface/GameType.h"
-#endif
-
 class CItemData;
 class CWeaponTrace;
 class IFlyEventHandler;
@@ -270,15 +266,6 @@ class CActorInstance : public IActorInstance, public IFlyTargetableObject
 		void SetShape(DWORD eShape, float fSpecular=0.0f);
 		void ChangeMaterial(const char * c_szFileName);
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		DWORD* GetSkillColorByMotionID(DWORD dwMotionID) { return m_dwSkillColor[dwMotionID]; };
-		DWORD* GetSkillColorByEffectID(DWORD id);
-		void ChangeSkillColor(const DWORD *dwSkillColor);
-
-	protected:
-		DWORD m_dwSkillColor[CRaceMotionData::SKILL_NUM][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
-
 #if defined(USE_NPC_WEAR_ITEM)
 	protected:
 		DWORD m_dwRealRaceIndex;
@@ -338,11 +325,7 @@ class CActorInstance : public IActorInstance, public IFlyTargetableObject
 		void UpdateAttachingInstances();
 		void  DettachEffect(DWORD dwEID);
 		DWORD AttachEffectByName(DWORD dwParentPartIndex, const char * c_pszBoneName, const char * c_pszEffectFileName);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		DWORD AttachEffectByID(DWORD dwParentPartIndex, const char * c_pszBoneName, DWORD dwEffectID, const D3DXVECTOR3 * c_pv3Position = NULL, DWORD * dwSkillColor = NULL, float fParticleScale = 1.0f, const D3DXVECTOR3* c_pv3MeshScale = NULL);
-#else
 		DWORD AttachEffectByID(DWORD dwParentPartIndex, const char * c_pszBoneName, DWORD dwEffectID, const D3DXVECTOR3 * c_pv3Position = NULL, float fParticleScale = 1.0f, const D3DXVECTOR3* c_pv3MeshScale = NULL);
-#endif
 		DWORD AttachSmokeEffect(DWORD eSmoke);
 
 		/////////////////////////////////////////////////////////////////////////////////////
@@ -500,11 +483,8 @@ class CActorInstance : public IActorInstance, public IFlyTargetableObject
 
 		/////////////////////////////////////////////////////////////////////////////////////
 		void		MotionEventProcess();
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		void		MotionEventProcess(DWORD dwcurTime, int iIndex, const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor = NULL);
-#else
 		void		MotionEventProcess(DWORD dwcurTime, int iIndex, const CRaceMotionData::TMotionEventData * c_pData);
-#endif
+
 		void		SoundEventProcess(BOOL bCheckFrequency);
 		/////////////////////////////////////////////////////////////////////////////////////
 
@@ -640,20 +620,15 @@ class CActorInstance : public IActorInstance, public IFlyTargetableObject
 
 		bool InterceptMotion(EMotionPushType iMotionType, WORD wMotion, float fBlendTime = 0.1f, UINT uSkill=0, float fSpeedRatio=1.0f);
 		void PushMotion(EMotionPushType iMotionType, DWORD dwMotionKey, float fBlendTime, float fSpeedRatio=1.0f);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		void ProcessMotionEventEffectToTargetEvent(const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor = NULL);
-		void ProcessMotionEventEffectEvent(const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor = NULL);
-#else
+
 		void ProcessMotionEventEffectToTargetEvent(const CRaceMotionData::TMotionEventData * c_pData);
 		void ProcessMotionEventEffectEvent(const CRaceMotionData::TMotionEventData * c_pData);
-#endif
+
 		void ProcessMotionEventSpecialAttacking(int iMotionEventIndex, const CRaceMotionData::TMotionEventData * c_pData);
 		void ProcessMotionEventSound(const CRaceMotionData::TMotionEventData * c_pData);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		void ProcessMotionEventFly(const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor = NULL);
-#else
+
 		void ProcessMotionEventFly(const CRaceMotionData::TMotionEventData * c_pData);
-#endif
+
 		void ProcessMotionEventWarp(const CRaceMotionData::TMotionEventData * c_pData);
 
 		void AddMovement(float fx, float fy, float fz);

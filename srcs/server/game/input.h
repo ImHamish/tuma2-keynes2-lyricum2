@@ -147,11 +147,6 @@ class CInputMain : public CInputProcessor
 		void		FlyTarget(LPCHARACTER ch, const char * pcData, BYTE bHeader);
 		void		UseSkill(LPCHARACTER ch, const char * pcData);
 
-#ifdef __SKILL_COLOR_SYSTEM__
-		void		SetSkillColor(LPCHARACTER ch, const char * pcData);
-#endif
-		
-
 		void		ScriptAnswer(LPCHARACTER ch, const void * pvData);
 		void		ScriptButton(LPCHARACTER ch, const void * pvData);
 		void		ScriptSelectItem(LPCHARACTER ch, const void * pvData);
@@ -269,9 +264,6 @@ protected:
 	void		AffectLoad(LPDESC d, const char * c_pData);
 #if defined(USE_BATTLEPASS)
 	void ExtBattlePassLoad(LPDESC d, const char* c_pData);
-#endif
-#ifdef __SKILL_COLOR_SYSTEM__
-	void		SkillColorLoad(LPDESC d, const char * c_pData);
 #endif
 
 	void		GuildLoad(const char * c_pData);

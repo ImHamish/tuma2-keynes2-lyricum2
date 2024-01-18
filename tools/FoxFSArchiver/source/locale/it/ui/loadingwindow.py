@@ -1,0 +1,41 @@
+window = {
+	"x" : 0,
+	"y" : 0,
+	"width" : SCREEN_WIDTH,
+	"height" : SCREEN_HEIGHT,
+	"children" : (
+		{
+			"name" : "bg_element",
+			"type" : "expanded_image",
+			"x" : 0,
+			"y" : 0,
+			"x_scale" : float(SCREEN_WIDTH) / 1920.0,
+			"y_scale" : float(SCREEN_HEIGHT) / 1080.0,
+			"image" : "d:/ymir work/ui/login_window/bg.png",
+		},
+		{
+			"name" : "main_element",
+			"type" : "ani_image",
+			"width" : SCREEN_WIDTH,
+			"height" : SCREEN_HEIGHT,
+			"x" : float(SCREEN_WIDTH - 454) / 2,
+			"y" : float(SCREEN_HEIGHT - 451) / 2,
+			"delay" : 0,
+			"images" :
+			(
+				"locale/it/ui/loading/load/tuma2_loading_01.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_02.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_03.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_04.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_05.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_06.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_07.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_08.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_09.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_10.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_11.DDS",
+				"locale/it/ui/loading/load/tuma2_loading_12.DDS",
+			),
+		},
+	),
+}

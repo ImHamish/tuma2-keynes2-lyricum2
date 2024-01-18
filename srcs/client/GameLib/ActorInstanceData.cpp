@@ -7,11 +7,6 @@
 #include "../eterlib/ResourceManager.h"
 #include "../etergrnlib/util.h"
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	#include "../UserInterface/InstanceBase.h"
-	#include "../UserInterface/PythonSkill.h"
-#endif
-
 DWORD CActorInstance::GetVirtualID()
 {
 	return m_dwSelfVID;
@@ -376,93 +371,6 @@ void CActorInstance::SetPart(DWORD dwPartIndex, DWORD dwItemID)
 	m_adwPartItemID[dwPartIndex] = dwItemID;
 }
 */
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-DWORD * CActorInstance::GetSkillColorByEffectID(DWORD id)
-{
-	switch (id)
-	{
-		case 14: // FLY_CHAIN_LIGHTNING
-			return m_dwSkillColor[108];
-			break;
-
-		case 16: //FLY_SKILL_MUYEONG
-			return m_dwSkillColor[78];
-			break;
-			/////////////////////////////////////////////
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_CHEONGEUN:
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_FALLEN_CHEONGEUN:
-			return m_dwSkillColor[19];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_GYEONGGONG:
-			return m_dwSkillColor[49];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_GWIGEOM:
-			return m_dwSkillColor[63];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_GONGPO:
-			return m_dwSkillColor[64];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_JUMAGAP:
-			return m_dwSkillColor[65];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_HOSIN:
-			return m_dwSkillColor[94];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_BOHO:
-			return m_dwSkillColor[95];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_KWAESOK:
-			return m_dwSkillColor[110];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_HEUKSIN:
-			return m_dwSkillColor[79];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_MUYEONG:
-			return m_dwSkillColor[78];
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_FIRE:
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_GICHEON:
-			return m_dwSkillColor[96];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_JEUNGRYEOK:
-			return m_dwSkillColor[111];
-			break;
-
-		case CInstanceBase::EFFECT_AFFECT + CInstanceBase::AFFECT_PABEOP:
-			return m_dwSkillColor[66];
-			break;
-			/////////////////////////////////////////////
-		case CInstanceBase::EFFECT_WEAPON + CInstanceBase::WEAPON_ONEHAND:
-		case CInstanceBase::EFFECT_WEAPON + CInstanceBase::WEAPON_TWOHAND:
-			return m_dwSkillColor[4];
-			break;
-	}
-
-	DWORD motion_index = GET_MOTION_INDEX(id);
-	for (int i = 0; i < CPythonSkill::SKILL_EFFECT_COUNT; ++i)
-	{
-		for (int x = 0; x < MAX_SKILL_COUNT; ++x)
-		{
-			if ((motion_index == ((CRaceMotionData::NAME_SKILL + x + 1) + (i * 25))) || (motion_index == ((CRaceMotionData::NAME_SKILL + 15 + x + 1) + (i * 25))))
-				return m_dwSkillColor[(motion_index - CRaceMotionData::NAME_SKILL) - (i * 25)];
-		}
-	}
-	return NULL;
-}
-#endif
 
 DWORD CActorInstance::GetPartItemID(DWORD dwPartIndex)
 {

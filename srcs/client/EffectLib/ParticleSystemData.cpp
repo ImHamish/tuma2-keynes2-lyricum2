@@ -30,13 +30,6 @@ CParticleProperty * CParticleSystemData::GetParticlePropertyPointer()
 	return &m_ParticleProperty;
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-CParticleProperty * CParticleSystemData::GetParticlePropertyBackupPointer()
-{
-	return &m_ParticleProperty_Backup;
-}
-#endif
-
 BOOL CParticleSystemData::OnLoadScript(CTextFileLoader & rTextFileLoader)
 {
 	{
@@ -244,10 +237,6 @@ BOOL CParticleSystemData::OnLoadScript(CTextFileLoader & rTextFileLoader)
 
 	m_ParticleProperty.m_TimeEventColor.clear();
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	m_ParticleProperty_Backup.m_TimeEventColor.clear();
-#endif
-
 	{
 		std::set<float> times;
 		int i;
@@ -277,11 +266,6 @@ BOOL CParticleSystemData::OnLoadScript(CTextFileLoader & rTextFileLoader)
 			c.a = fA;
 			t.m_Value.m_dwColor = /*(DWORD)*/ (DWORD)c;
 			m_ParticleProperty.m_TimeEventColor.push_back(t);
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			m_ParticleProperty_Backup.m_TimeEventColor.push_back(t);
-#endif
-
 		}
 	}
 #endif
@@ -317,11 +301,6 @@ void CParticleSystemData::OnClear()
 {
 	m_EmitterProperty.Clear();
 	m_ParticleProperty.Clear();
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	m_ParticleProperty_Backup.Clear();
-#endif
-
 }
 
 bool CParticleSystemData::OnIsData()

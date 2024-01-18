@@ -52,10 +52,6 @@ struct SNetworkActorData
 	int m_iPremiumTime;
 #endif
 	std::string m_country_flag;
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	DWORD	m_dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
 	BYTE m_bGuildLeaderGrade;
 
 	SNetworkActorData();
@@ -118,9 +114,6 @@ struct SNetworkUpdateActorData
 	short m_sAlignment;
 	BYTE m_byPKMode;
 	DWORD m_dwMountVnum;
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	DWORD m_dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 	BYTE m_byPremium;
 	int m_iPremiumTime;
@@ -152,9 +145,6 @@ struct SNetworkUpdateActorData
 		m_sAlignment=0;
 		m_byPKMode=0;
 		m_dwMountVnum=0;
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		memset(m_dwSkillColor, 0, sizeof(m_dwSkillColor));
-#endif
 #ifdef ENABLE_PREMIUM_PLAYERS
 		m_byPremium = 0;
 		m_iPremiumTime = 0;

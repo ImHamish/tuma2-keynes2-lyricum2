@@ -1,0 +1,26 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner.tga]
+[X_PADDING=12;COLOR=0xffd700;FONT_SIZE=15]CERINÞE:
+[X_PADDING=12]*Nivel minim: 95.
+[X_PADDING=12]*Nivel maxim: 110.
+[X_PADDING=12]*Permis: Permis Trecere Nemere.
+[X_PADDING=12]*Tip: Singur ºi Grup.
+[IMG=d:/ymir work/ui/wiki/rahmen.tga; Y=5; X=456]
+[IMG=icon/item/71175.tga; Y=15; X=478]
+[X_PADDING=458]P. Trec. Nemere
+
+[X_PADDING=12;COLOR=0xffd700;FONT_SIZE=15]ALTE INFORMAÞII:
+[X_PADDING=12]*Limita de timp este de 50 minute.
+[X_PADDING=12]*Timpul de aºteptare este de 1h 30m.
+[X_PADDING=12]*În cazul în care se acceseazã în grup, fiecare membru al grupei trebuie sã aibe permisul.
+[X_PADDING=12]*Se poate accesa pe sistemul de Dungeon Info.
+[X_PADDING=12]*Bonusul care conteazã este: Puterea Gheþii.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=184; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]DEFSAªURAREA DUNGEON-ULUI
+
+[X_PADDING=12;COLOR=ef4f00;FONT_SIZE=15]PRIMA ETAPA(si ultima)
+[X_PADDING=20]Omoarã-l pe Nemere.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=270; CENTER_ALIGN]

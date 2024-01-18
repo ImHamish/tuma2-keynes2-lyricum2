@@ -21,14 +21,7 @@ void CActorInstance::MotionEventProcess()
 		if (!m_pkCurRaceMotionData->GetMotionEventDataPointer(i, &c_pData))
 			continue;
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		if (m_kCurMotNode.uSkill == 0)
-			MotionEventProcess(m_kCurMotNode.dwcurFrame, i, c_pData, GetSkillColorByEffectID(m_kCurMotNode.dwMotionKey));
-		else
-			MotionEventProcess(m_kCurMotNode.dwcurFrame, i, c_pData, m_dwSkillColor[m_kCurMotNode.uSkill]);
-#else
 		MotionEventProcess(m_kCurMotNode.dwcurFrame, i, c_pData);
-#endif
 	}
 }
 
@@ -42,11 +35,7 @@ void CActorInstance::SoundEventProcess(BOOL bCheckFrequency)
 	rkSndMgr.UpdateSoundInstance(m_x, m_y, m_z, m_kCurMotNode.dwcurFrame, c_pkVct_kSndInst, bCheckFrequency);
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CActorInstance::MotionEventProcess(DWORD dwcurFrame, int iIndex, const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor)
-#else
 void CActorInstance::MotionEventProcess(DWORD dwcurFrame, int iIndex, const CRaceMotionData::TMotionEventData * c_pData)
-#endif
 {
 	if (c_pData->dwFrame != dwcurFrame)
 		return;
@@ -54,19 +43,11 @@ void CActorInstance::MotionEventProcess(DWORD dwcurFrame, int iIndex, const CRac
 	switch (c_pData->iType)
 	{
 		case CRaceMotionData::MOTION_EVENT_TYPE_EFFECT:
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			ProcessMotionEventEffectEvent(c_pData, dwSkillColor);
-#else
 			ProcessMotionEventEffectEvent(c_pData);
-#endif
 			break;
 
 		case CRaceMotionData::MOTION_EVENT_TYPE_EFFECT_TO_TARGET:
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			ProcessMotionEventEffectToTargetEvent(c_pData, dwSkillColor);
-#else
 			ProcessMotionEventEffectToTargetEvent(c_pData);
-#endif
 			break;
 
 		case CRaceMotionData::MOTION_EVENT_TYPE_SCREEN_WAVING:
@@ -82,11 +63,7 @@ void CActorInstance::MotionEventProcess(DWORD dwcurFrame, int iIndex, const CRac
 			break;
 
 		case CRaceMotionData::MOTION_EVENT_TYPE_FLY:
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			ProcessMotionEventFly(c_pData, dwSkillColor);
-#else
 			ProcessMotionEventFly(c_pData);
-#endif
 			break;
 
 		case CRaceMotionData::MOTION_EVENT_TYPE_CHARACTER_SHOW:
@@ -124,11 +101,7 @@ BOOL CActorInstance::__IsHiding()
 	return m_isHiding;
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CActorInstance::ProcessMotionEventEffectEvent(const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor)
-#else
 void CActorInstance::ProcessMotionEventEffectEvent(const CRaceMotionData::TMotionEventData * c_pData)
-#endif
 {
 	if (CRaceMotionData::MOTION_EVENT_TYPE_EFFECT != c_pData->iType)
 		return;
@@ -138,11 +111,7 @@ void CActorInstance::ProcessMotionEventEffectEvent(const CRaceMotionData::TMotio
 	const D3DXVECTOR3 c_v3Scale = GetScale();
 	if (c_pEffectData->isIndependent)
 	{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		int iIndex = CEffectManager::Instance().CreateEffectWithScale(c_pEffectData->dwEffectIndex, D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), dwSkillColor, c_v3Scale.x);
-#else
 		int iIndex = CEffectManager::Instance().CreateEffectWithScale(c_pEffectData->dwEffectIndex, D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), c_v3Scale.x);
-#endif
 
 		D3DXMATRIX matLocalPosition;
 		D3DXMatrixTranslation(&matLocalPosition, c_pEffectData->v3EffectPosition.x, c_pEffectData->v3EffectPosition.y, c_pEffectData->v3EffectPosition.z);
@@ -179,9 +148,6 @@ void CActorInstance::ProcessMotionEventEffectEvent(const CRaceMotionData::TMotio
 */
 			const char* szAttachingBoneName = c_pEffectData->strAttachingBoneName.c_str();
 			AttachEffectByID(0, szAttachingBoneName, c_pEffectData->dwEffectIndex, &c_pEffectData->v3EffectPosition
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, dwSkillColor
-#endif
 			, c_v3Scale.x, &c_v3Scale);
 		}
 		else
@@ -207,9 +173,6 @@ void CActorInstance::ProcessMotionEventEffectEvent(const CRaceMotionData::TMotio
 				int iIndex = CEffectManager::Instance().CreateEffect(c_pEffectData->dwEffectIndex,
 														c_pEffectData->v3EffectPosition,
 														D3DXVECTOR3(0.0f, 0.0f, 0.0f)
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, dwSkillColor
-#endif
 														);
 				CEffectManager::Instance().SelectEffectInstance(iIndex);
 				CEffectManager::Instance().SetEffectInstanceGlobalMatrix(matWorld);
@@ -234,9 +197,6 @@ void CActorInstance::ProcessMotionEventEffectEvent(const CRaceMotionData::TMotio
 				int iIndex = CEffectManager::Instance().CreateEffect(c_pEffectData->dwEffectIndex,
 														c_pEffectData->v3EffectPosition,
 														D3DXVECTOR3(0.0f, 0.0f, 0.0f)
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, dwSkillColor
-#endif
 														);
 				CEffectManager::Instance().SelectEffectInstance(iIndex);
 				CEffectManager::Instance().SetEffectInstanceGlobalMatrix(matWorld);
@@ -245,19 +205,11 @@ void CActorInstance::ProcessMotionEventEffectEvent(const CRaceMotionData::TMotio
 	}
 	else
 	{
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		AttachEffectByID(0, NULL, c_pEffectData->dwEffectIndex, &c_pEffectData->v3EffectPosition, dwSkillColor, c_v3Scale.x, &c_v3Scale);
-#else
 		AttachEffectByID(0, NULL, c_pEffectData->dwEffectIndex, &c_pEffectData->v3EffectPosition, c_v3Scale.x, &c_v3Scale);
-#endif
 	}
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CActorInstance::ProcessMotionEventEffectToTargetEvent(const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor)
-#else
 void CActorInstance::ProcessMotionEventEffectToTargetEvent(const CRaceMotionData::TMotionEventData * c_pData)
-#endif
 {
 	if (CRaceMotionData::MOTION_EVENT_TYPE_EFFECT_TO_TARGET != c_pData->iType)
 		return;
@@ -286,11 +238,7 @@ void CActorInstance::ProcessMotionEventEffectToTargetEvent(const CRaceMotionData
 			D3DXVECTOR3 v3Position(	c_pEffectToTargetData->v3EffectPosition.x,
 									c_pEffectToTargetData->v3EffectPosition.y,
 									c_pEffectToTargetData->v3EffectPosition.z);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			pTargetInstance->AttachEffectByID(0, NULL, c_pEffectToTargetData->dwEffectIndex, &v3Position, dwSkillColor);
-#else
 			pTargetInstance->AttachEffectByID(0, NULL, c_pEffectToTargetData->dwEffectIndex, &v3Position);
-#endif
 		}
 		else
 		{
@@ -298,11 +246,7 @@ void CActorInstance::ProcessMotionEventEffectToTargetEvent(const CRaceMotionData
 			D3DXVECTOR3 v3Position(	c_rv3FlyTarget.x + c_pEffectToTargetData->v3EffectPosition.x,
 									c_rv3FlyTarget.y + c_pEffectToTargetData->v3EffectPosition.y,
 									c_rv3FlyTarget.z + c_pEffectToTargetData->v3EffectPosition.z);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			CEffectManager::Instance().CreateEffect(c_pEffectToTargetData->dwEffectIndex, v3Position, D3DXVECTOR3(0.0f, 0.0f, 0.0f), dwSkillColor);
-#else
 			CEffectManager::Instance().CreateEffect(c_pEffectToTargetData->dwEffectIndex, v3Position, D3DXVECTOR3(0.0f, 0.0f, 0.0f));
-#endif
 		}
 	}
 }
@@ -350,11 +294,7 @@ void CActorInstance::ProcessMotionEventSound(const CRaceMotionData::TMotionEvent
 	CSoundManager::Instance().PlaySound3D(m_x, m_y, m_z, c_pSoundData->strSoundFileName.c_str());
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CActorInstance::ProcessMotionEventFly(const CRaceMotionData::TMotionEventData * c_pData, DWORD * dwSkillColor)
-#else
 void CActorInstance::ProcessMotionEventFly(const CRaceMotionData::TMotionEventData * c_pData)
-#endif
 {
 	if (CRaceMotionData::MOTION_EVENT_TYPE_FLY != c_pData->iType)
 		return;
@@ -383,11 +323,7 @@ void CActorInstance::ProcessMotionEventFly(const CRaceMotionData::TMotionEventDa
 			}
 		}
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		CFlyingInstance * pInstance = rfm.CreateFlyingInstanceFlyTarget(c_pFlyData->dwFlyIndex, v3Start, m_kFlyTarget, true, dwSkillColor);
-#else
 		CFlyingInstance * pInstance = rfm.CreateFlyingInstanceFlyTarget(c_pFlyData->dwFlyIndex, v3Start, m_kFlyTarget, true);
-#endif
 		if (pInstance)
 		{
 			pInstance->SetEventHandler(m_pFlyEventHandler);

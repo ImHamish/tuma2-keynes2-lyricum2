@@ -201,19 +201,11 @@ void CEffectManager::WikiModuleRenderOneEffect(DWORD id)
 }
 #endif
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-BOOL CEffectManager::RegisterEffect(const char * c_szFileName,bool isExistDelete,bool isNeedCache, const char * name)
-#else
 BOOL CEffectManager::RegisterEffect(const char * c_szFileName,bool isExistDelete,bool isNeedCache)
-#endif
 {
 	std::string strFileName;
 	StringPath(c_szFileName, strFileName);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	DWORD dwCRC = GetCaseCRC32(strFileName.c_str(), strFileName.length(), name);
-#else
 	DWORD dwCRC = GetCaseCRC32(strFileName.c_str(), strFileName.length());
-#endif
 
 	TEffectDataMap::iterator itor = m_kEftDataMap.find(dwCRC);
 	if (m_kEftDataMap.end() != itor)
@@ -254,28 +246,15 @@ BOOL CEffectManager::RegisterEffect(const char * c_szFileName,bool isExistDelete
 
 	return TRUE;
 }
-// CEffectData 를 포인터형으로 리턴하게 하고..
-// CEffectData에서 CRC를 얻을수 있게 한다
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-BOOL CEffectManager::RegisterEffect2(const char * c_szFileName, DWORD* pdwRetCRC, bool isNeedCache, const char * name)
-#else
+
 BOOL CEffectManager::RegisterEffect2(const char * c_szFileName, DWORD* pdwRetCRC, bool isNeedCache)
-#endif
 {
 	std::string strFileName;
 	StringPath(c_szFileName, strFileName);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	DWORD dwCRC = GetCaseCRC32(strFileName.c_str(), strFileName.length(), name);
-#else
 	DWORD dwCRC = GetCaseCRC32(strFileName.c_str(), strFileName.length());
-#endif
 	*pdwRetCRC=dwCRC;
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	return RegisterEffect(c_szFileName,false,isNeedCache, name);
-#else
 	return RegisterEffect(c_szFileName,false,isNeedCache);
-#endif
 }
 
 int CEffectManager::CreateEffect(const char * c_szFileName, const D3DXVECTOR3 & c_rv3Position, const D3DXVECTOR3 & c_rv3Rotation)
@@ -284,19 +263,12 @@ int CEffectManager::CreateEffect(const char * c_szFileName, const D3DXVECTOR3 & 
 	return CreateEffect(dwID, c_rv3Position, c_rv3Rotation);
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-int CEffectManager::CreateEffect(DWORD dwID, const D3DXVECTOR3 & c_rv3Position, const D3DXVECTOR3 & c_rv3Rotation, DWORD * dwSkillColor)
-#else
 int CEffectManager::CreateEffect(DWORD dwID, const D3DXVECTOR3 & c_rv3Position, const D3DXVECTOR3 & c_rv3Rotation)
-#endif
 {
 	int iInstanceIndex = GetEmptyIndex();
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	CreateEffectInstance(iInstanceIndex, dwID, dwSkillColor);
-#else
 	CreateEffectInstance(iInstanceIndex, dwID);
-#endif
+
 	SelectEffectInstance(iInstanceIndex);
 	D3DXMATRIX mat;
 	D3DXMatrixRotationYawPitchRoll(&mat,D3DXToRadian(c_rv3Rotation.x),D3DXToRadian(c_rv3Rotation.y),D3DXToRadian(c_rv3Rotation.z));
@@ -308,11 +280,7 @@ int CEffectManager::CreateEffect(DWORD dwID, const D3DXVECTOR3 & c_rv3Position, 
 	return iInstanceIndex;
 }
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-void CEffectManager::CreateEffectInstance(DWORD dwInstanceIndex, DWORD dwID, DWORD * dwSkillColor)
-#else
 void CEffectManager::CreateEffectInstance(DWORD dwInstanceIndex, DWORD dwID)
-#endif
 {
 	if (!dwID)
 		return;
@@ -325,11 +293,7 @@ void CEffectManager::CreateEffectInstance(DWORD dwInstanceIndex, DWORD dwID)
 	}
 
 	CEffectInstance * pEffectInstance = CEffectInstance::New();
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	pEffectInstance->SetEffectDataPointer(pEffect, dwSkillColor, dwID);
-#else
 	pEffectInstance->SetEffectDataPointer(pEffect);
-#endif
 
 	m_kEftInstMap.insert(TEffectInstanceMap::value_type(dwInstanceIndex, pEffectInstance));
 }
@@ -576,17 +540,11 @@ CEffectManager::~CEffectManager()
 // just for map effect
 
 int CEffectManager::CreateEffectWithScale(DWORD dwID, const D3DXVECTOR3& c_rv3Position, const D3DXVECTOR3& c_rv3Rotation
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, DWORD * dwSkillColor
-#endif
 , float fParticleScale)
 {
 	int iInstanceIndex = GetEmptyIndex();
 
 	CreateEffectInstanceWithScale(iInstanceIndex, dwID,
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-dwSkillColor,
-#endif
 	fParticleScale);
 	SelectEffectInstance(iInstanceIndex);
 	D3DXMATRIX mat;
@@ -600,9 +558,6 @@ dwSkillColor,
 }
 
 void CEffectManager::CreateEffectInstanceWithScale(DWORD dwInstanceIndex, DWORD dwID
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, DWORD * dwSkillColor
-#endif
 , float fParticleScale, const D3DXVECTOR3* c_pv3MeshScale)
 {
 	if (!dwID)
@@ -620,9 +575,6 @@ void CEffectManager::CreateEffectInstanceWithScale(DWORD dwInstanceIndex, DWORD 
 	if (c_pv3MeshScale)
 		pEffectInstance->SetMeshScale(*c_pv3MeshScale);
 	pEffectInstance->SetEffectDataPointer(pEffect
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-, dwSkillColor, dwID
-#endif
 	);
 
 	m_kEftInstMap.insert(TEffectInstanceMap::value_type(dwInstanceIndex, pEffectInstance));

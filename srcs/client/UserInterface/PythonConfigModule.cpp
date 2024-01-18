@@ -91,9 +91,6 @@ void initcfg()
 	PyModule_AddIntConstant(poModule, "SAVE_GENERAL", CPythonConfig::CLASS_GENERAL);
 	PyModule_AddIntConstant(poModule, "SAVE_CHAT", CPythonConfig::CLASS_CHAT);
 	PyModule_AddIntConstant(poModule, "SAVE_OPTION", CPythonConfig::CLASS_OPTION);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-	PyModule_AddIntConstant(poModule, "SAVE_SKILL_COLOR", CPythonConfig::CLASS_SKILL_COLOR);
-#endif
 }
 
 #endif

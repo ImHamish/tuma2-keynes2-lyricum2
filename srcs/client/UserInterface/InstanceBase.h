@@ -45,9 +45,6 @@ class CInstanceBase
 			uint32_t m_dwAura;
 #endif
 			std::string m_country_flag;
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-			DWORD	m_dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
 			short	m_sAlignment;
 			BYTE	m_byPKMode;
 			CAffectFlagContainer	m_kAffectFlags;
@@ -906,12 +903,7 @@ class CInstanceBase
 	public:
 		static void DestroySystem();
 		static void CreateSystem(UINT uCapacity);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		static bool RegisterEffect(UINT eEftType, const char* c_szEftAttachBone, const char* c_szEftName, bool isCache, const char* name = NULL);
-		static bool RegisterEffectNormal(UINT eEftType, const char* c_szEftAttachBone, const char* c_szEftName, bool isCache);
-#else
 		static bool RegisterEffect(UINT eEftType, const char* c_szEftAttachBone, const char* c_szEftName, bool isCache);
-#endif
 #ifdef ENABLE_GENDER_ALIGNMENT
 		static void RegisterTitleName(const int iIndex, const char * c_szTitleNameF, const char * c_szTitleNameM);
 #else
@@ -1044,9 +1036,6 @@ class CInstanceBase
 		void					ChangeWeapon(DWORD eWeapon);
 		void					ChangeHair(DWORD eHair);
 		void					ChangeGuild(DWORD dwGuildID, BYTE bGuildLeaderGrade);
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		void					ChangeSkillColor(const DWORD * dwSkillColor);
-#endif
 
 		DWORD					GetWeaponType();
 
@@ -1073,9 +1062,6 @@ class CInstanceBase
 		DWORD					GetGuildID();
 		BYTE GetGuildLeaderGrade();
 		BYTE GetGuildLeaderGradeType();
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		DWORD *					GetSkillColor(const DWORD dwSkillIndex);
-#endif
 
 #ifdef ENABLE_PREMIUM_PLAYERS
 	BYTE GetPremiumPlayer();
@@ -1491,9 +1477,6 @@ class CInstanceBase
 		DWORD					m_dwEmpireID;
 		DWORD					m_dwGuildID;
 		BYTE m_bGuildLeaderGrade;
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		DWORD *					m_dwSkillColor[ESkillColorLength::MAX_SKILL_COUNT + MAX_BUFF_COUNT][ESkillColorLength::MAX_EFFECT_COUNT];
-#endif
 
 	protected:
 		CAffectFlagContainer	m_kAffectFlagContainer;

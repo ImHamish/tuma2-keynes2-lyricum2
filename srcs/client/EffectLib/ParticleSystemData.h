@@ -18,10 +18,6 @@ class CParticleSystemData : public CEffectElementBase
 		CEmitterProperty * GetEmitterPropertyPointer();
 		CParticleProperty * GetParticlePropertyPointer();
 
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		CParticleProperty * GetParticlePropertyBackupPointer();
-#endif
-
 		void ChangeTexture(const char * c_szFileName);
 
 		void BuildDecorator(CParticleInstance * pInstance);
@@ -34,10 +30,6 @@ class CParticleSystemData : public CEffectElementBase
 
 		CEmitterProperty m_EmitterProperty;
 		CParticleProperty m_ParticleProperty;
-
-#ifdef ENABLE_SKILL_COLOR_SYSTEM
-		CParticleProperty m_ParticleProperty_Backup;
-#endif
 
 	public:
 		static void DestroySystem();

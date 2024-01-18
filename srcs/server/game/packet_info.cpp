@@ -275,14 +275,6 @@ CPacketInfoCG::CPacketInfoCG()
 #ifdef ENABLE_SWITCHBOT_WORLDARD
 	Set(HEADER_CG_SWITCHBOT, sizeof(TPacketCGSwitchBotSend), "SwitchBotSend", true);
 #endif
-
-#if defined(__SLOT_MACHINE_SYSTEM__)
-	Set(HEADER_CG_SLOT_MACHINE, sizeof(TPacketCGSlotMachine), "SlotMachine", true);
-#endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	Set(HEADER_CG_SKILL_COLOR, sizeof(TPacketCGSkillColor), "ChangeSkillColor", true);
-#endif
 #ifdef ENABLE_OPENSHOP_PACKET
 	Set(HEADER_CG_OPENSHOP, sizeof(TPacketOpenShop), "OpenShop", true);
 #endif
