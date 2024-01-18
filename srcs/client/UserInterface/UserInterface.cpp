@@ -325,8 +325,7 @@ std::vector<std::wstring> packFiles = {
 	L"pack/patch2",
 	L"pack/patch1_d",
 	L"pack/patch2_d",
-	L"pack/stdlib",
-	L"pack/core",
+	L"pack/root",
 };
 
 void PackUninitialize() {

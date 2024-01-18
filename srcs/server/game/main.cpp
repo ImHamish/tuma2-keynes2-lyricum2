@@ -458,7 +458,7 @@ int main(int argc, char **argv)
     if (!g_bAuthServer)
     {
         std::string temp_exp_line;
-        std::ifstream exppet_table_open("/keynes2-project/server/srv1/share/locale/germany/exppettable.txt");
+        std::ifstream exppet_table_open("/tuma2-keynes2-lyricum2/server/srv1/share/locale/germany/exppettable.txt");
         /*if (!exp_table_open.is_open())
         return 0;*/
 

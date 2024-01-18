@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/terrain:d:/ymir work/terrainmaps/" ArchivePath="../../client/pack/terrain" XmlPath="xml/terrain_create.xml"></CreateEterPackXml>
+</ScriptFile>

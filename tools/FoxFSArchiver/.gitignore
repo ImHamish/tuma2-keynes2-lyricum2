@@ -1,0 +1,6 @@
+# Do ignore: Types
+*.pyc
+
+# Do ignore: Files
+property.xml
+output.txt

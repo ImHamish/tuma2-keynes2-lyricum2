@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/guild:d:/ymir work/guild/" ArchivePath="../../client/pack/guild" XmlPath="xml/guild_create.xml"></CreateEterPackXml>
+</ScriptFile>

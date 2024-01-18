@@ -1,0 +1,4 @@
+# Do ignore: All
+*
+!.gitignore
+!PropertyGen.exe

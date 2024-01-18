@@ -1,0 +1,10 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/core" ArchivePath="../../client/pack/core" XmlPath="xml/core_create.xml">
+		<Ignore Pattern="*.psd" />
+		<Ignore Pattern="*.uas" />
+		<Ignore Pattern="*.pdn" />
+		<Ignore Pattern="*.ufo" />
+
+		<Patch Search="stdlib/" Replace="" />
+	</CreateEterPackXml>
+</ScriptFile>

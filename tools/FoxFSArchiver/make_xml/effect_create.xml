@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/effect:d:/ymir work/effect/" ArchivePath="../../client/pack/effect" XmlPath="xml/effect_create.xml"></CreateEterPackXml>
+</ScriptFile>

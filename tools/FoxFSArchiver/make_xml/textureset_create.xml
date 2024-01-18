@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/textureset:textureset/" ArchivePath="../../client/pack/textureset" XmlPath="xml/textureset_create.xml"></CreateEterPackXml>
+</ScriptFile>

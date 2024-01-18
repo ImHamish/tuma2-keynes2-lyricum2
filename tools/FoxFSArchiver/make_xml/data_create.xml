@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/data" ArchivePath="../../client/pack/data" XmlPath="xml/data_create.xml"></CreateEterPackXml>
+</ScriptFile>

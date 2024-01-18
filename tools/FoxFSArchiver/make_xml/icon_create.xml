@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/icon:icon/" ArchivePath="../../client/pack/icon" XmlPath="xml/icon_create.xml"></CreateEterPackXml>
+</ScriptFile>

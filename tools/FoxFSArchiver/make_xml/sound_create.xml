@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/sound:sound/" ArchivePath="../../client/pack/sound" XmlPath="xml/sound_create.xml"></CreateEterPackXml>
+</ScriptFile>

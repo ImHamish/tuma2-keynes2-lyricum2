@@ -1,0 +1,3 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/zone2:d:/ymir work/zone/" ArchivePath="../../client/pack/zone2" XmlPath="xml/zone2_create.xml"></CreateEterPackXml>
+</ScriptFile>

@@ -1,0 +1,5 @@
+<ScriptFile>
+	<CreateEterPackXml Input="source/npc2:d:/ymir work/npc2/" ArchivePath="../../client/pack/npc2" XmlPath="xml/npc2_create.xml">
+		<Ignore Pattern="*.xml" />
+	</CreateEterPackXml>
+</ScriptFile>

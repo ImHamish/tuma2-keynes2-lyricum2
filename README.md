@@ -10,13 +10,13 @@ pkg install python27
 
 pkg install gmake
 
-cd /home
+cd /
 
 git clone https://github.com/yPincc/tuma2-keynes2-lyricum2
 
-pkg install mariadb105-server-10.5.21
+pkg install mariadb105-server-10.5.23
 
-cp /home/tuma2-keynes2-lyricum2/setup/mariadb/server.cnf /usr/local/etc/mysql/conf.d
+cp /tuma2-keynes2-lyricum2/setup/mariadb/server.cnf /usr/local/etc/mysql/conf.d
 
 sysrc mysql_enable="YES"
 
@@ -46,14 +46,14 @@ FLUSH PRIVILEGES;
 
 quit
 
-cd /home/tuma2-keynes2-lyricum2/srcs
+cd /tuma2-keynes2-lyricum2/srcs
 
 sh build_release.sh
 
-cd /home/tuma2-keynes2-lyricum2/setup
+cd /tuma2-keynes2-lyricum2/setup
 
 gmake
 
-cd /home/tuma2-keynes2-lyricum2/server
+cd /tuma2-keynes2-lyricum2/server
 
 sh admin_panel.sh
