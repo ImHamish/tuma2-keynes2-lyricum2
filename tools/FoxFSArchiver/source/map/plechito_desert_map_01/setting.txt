@@ -1,0 +1,12 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	6	6
+BasePosition	921600	1305600
+TextureSet	textureset\plechito_desert_map_01.txt
+Environment	plechito_desert_map_01.msenv
+

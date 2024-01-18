@@ -1,0 +1,12 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	2	2
+BasePosition	2457600	3584000
+TextureSet	textureset\Asenis_recpak.txt
+Environment	asenis_recpak.msenv
+
