@@ -1,0 +1,8 @@
+#ifndef SHARE_ITEMLENGTH_HPP
+#define SHARE_ITEMLENGTH_HPP
+
+#if VSTD_HAS_PRAGMA_ONCE
+#pragma once
+#endif
+
+#endif // SHARE_ITEMLENGTH_HPP

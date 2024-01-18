@@ -1,0 +1,99 @@
+#ifndef SHARE_TABLES_HPP
+#define SHARE_TABLES_HPP
+
+#if VSTD_HAS_PRAGMA_ONCE
+#pragma once
+#endif
+
+enum EM2HeadersCG
+{
+#ifdef USE_MULTIPLE_OPENING
+    HEADER_CG_MULTI_CHESTS_OPEN                                 = 35,
+#endif
+};
+
+#ifdef IS_SERVER
+enum EM2HeadersGD
+{
+#if defined(ENABLE_VOTE4BONUS) || defined(USE_AUTO_HUNT)
+    HEADER_GD_UPDATE_PREMIUM                                    = 117,
+#endif
+};
+#endif
+
+#pragma pack(1)
+//////////////////////////////////////////////////////////////
+/// COMMON ///////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+#ifdef USE_PICKUP_FILTER
+typedef struct SFilterTable
+{
+    bool    bJobNeed;
+    bool    bRefineNeed;
+    bool    bLevelNeed;
+    bool    bJobs[JOB_MAX_NUM];
+    uint8_t bRefine[2];
+    uint8_t bLevel[2];
+    bool    bSubs[30];
+
+    SFilterTable() : bJobNeed(false)
+                    , bRefineNeed(false)
+                    , bLevelNeed(false)
+    {
+        bRefine[0] = 0;
+        bRefine[1] = 120;
+        bLevel[0] = 0;
+        bLevel[1] = 200;
+
+        std::memset(&bJobs, true, sizeof(bJobs));
+        std::memset(&bSubs, true, sizeof(bSubs));
+    }
+} TFilterTable;
+#endif
+
+
+
+//////////////////////////////////////////////////////////////
+/// CLIENT TO GAME ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////
+/// GAME TO CLIENT ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////
+/// GAME TO GAME /////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+#ifdef IS_SERVER
+#endif
+
+
+
+//////////////////////////////////////////////////////////////
+/// DB TO GAME ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+#ifdef IS_SERVER
+#endif
+
+
+
+//////////////////////////////////////////////////////////////
+/// GAME TO DB ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+#ifdef IS_SERVER
+#if defined(ENABLE_VOTE4BONUS) || defined(USE_AUTO_HUNT)
+typedef struct SPacketGDPremiumUpdate
+{
+    char    login[LOGIN_MAX_LEN + 1];
+    uint8_t type;
+    int32_t time;
+} TPacketGDPremiumUpdate;
+#endif
+#endif
+#pragma pack()
+
+#endif // SHARE_TABLES_HPP

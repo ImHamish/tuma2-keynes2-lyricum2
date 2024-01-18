@@ -1,0 +1,9 @@
+#ifndef _EL_SERVICEDEFS_H_
+#define _EL_SERVICEDEFS_H_
+
+#define _IMPROVED_PACKET_ENCRYPTION_
+#define ENABLE_FIX_MOBS_LAG
+//#define __PERFORMANCE_CHECK__
+
+#endif //_EL_SERVICEDEFS_H_
+

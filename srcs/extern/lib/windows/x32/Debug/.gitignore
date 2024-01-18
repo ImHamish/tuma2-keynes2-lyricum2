@@ -1,0 +1,5 @@
+# Do ignore: Files
+rootlib.lib
+rootlib.pdb
+rootlib.idb
+cryptopp-static.lib
