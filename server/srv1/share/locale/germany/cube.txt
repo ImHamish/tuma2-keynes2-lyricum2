@@ -1,0 +1,548 @@
+section
+"kyanite_belt"
+npc	20016
+item	70031	150
+item	71129	150
+item	71123	150
+reward	18110	1
+allow_copy
+category	belts
+percent	100
+gold	400000000000
+gaya	0
+end
+
+section
+"beta_bracelet"
+npc	20016
+item	14209	1
+item	30512	5
+item	50635	10
+reward	14500	1
+allow_copy
+category	beta_bracelet
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_bracelet"
+npc	20016
+item	14209	1
+item	30516	5
+item	50636	10
+reward	14520	1
+allow_copy
+category	beta_bracelet
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_bracelet"
+npc	20016
+item	14209	1
+item	30505	5
+item	50637	10
+reward	14540	1
+allow_copy
+category	beta_bracelet
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_bracelet"
+npc	20016
+item	14209	1
+item	30506	5
+item	50638	10
+reward	14560	1
+allow_copy
+category	beta_bracelet
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_necklace"
+npc	20016
+item	16209	1
+item	30512	5
+item	50635	10
+reward	16500	1
+allow_copy
+category	beta_necklace
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_necklace"
+npc	20016
+item	16209	1
+item	30516	5
+item	50636	10
+reward	16520	1
+allow_copy
+category	beta_necklace
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_necklace"
+npc	20016
+item	16209	1
+item	30505	5
+item	50637	10
+reward	16540	1
+allow_copy
+category	beta_necklace
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_necklace"
+npc	20016
+item	16209	1
+item	30506	5
+item	50638	10
+reward	16560	1
+allow_copy
+category	beta_necklace
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_earrings"
+npc	20016
+item	17209	1
+item	30512	5
+item	50635	10
+reward	17500	1
+allow_copy
+category	beta_earrings
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_earrings"
+npc	20016
+item	17209	1
+item	30516	5
+item	50636	10
+reward	17520	1
+allow_copy
+category	beta_earrings
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_earrings"
+npc	20016
+item	17209	1
+item	30505	5
+item	50637	10
+reward	17540	1
+allow_copy
+category	beta_earrings
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"beta_earrings"
+npc	20016
+item	17209	1
+item	30506	5
+item	50638	10
+reward	17560	1
+allow_copy
+category	beta_earrings
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"zodiac_armors"
+npc	20016
+item	12019	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	19290	1
+allow_copy
+category	zodiac_armors
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_armors"
+npc	20016
+item	12029	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	19490	1
+allow_copy
+category	zodiac_armors
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_armors"
+npc	20016
+item	12039	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	19690	1
+allow_copy
+category	zodiac_armors
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_armors"
+npc	20016
+item	12049	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	19890	1
+allow_copy
+category	zodiac_armors
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_weapons"
+npc	20016
+item	189	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	300	1
+allow_copy
+category	zodiac_weapons
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_weapons"
+npc	20016
+item	199	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	310	1
+allow_copy
+category	zodiac_weapons
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_weapons"
+npc	20016
+item	3169	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	3220	1
+allow_copy
+category	zodiac_weapons
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_weapons"
+npc	20016
+item	2179	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	2200	1
+allow_copy
+category	zodiac_weapons
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_weapons"
+npc	20016
+item	1139	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	1180	1
+allow_copy
+category	zodiac_weapons
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"zodiac_weapons"
+npc	20016
+item	5129	1
+item	51001	30000
+item	90030	250
+item	27987	20000
+item	70031	30
+reward	5160	1
+allow_copy
+category	zodiac_weapons
+percent	85
+gold	5000000000
+gaya	0
+end
+
+section
+"roua_mov"
+npc	20016
+item	90029	50000
+item	90030	40
+item	27987	30000
+item	30270	50000
+item	51001	5000
+reward	88941	1
+allow_copy
+category	craft_roua
+percent	100
+gold	25000000
+gaya	0
+end
+
+section
+"roua_roz"
+npc	20016
+item	90029	100000
+item	90030	200
+item	27987	100000
+item	30270	500000
+item	51001	20000
+reward	88942	1
+allow_copy
+category	craft_roua
+percent	100
+gold	2000000000
+gaya	0
+end
+
+section
+"roua_turcoaz"
+npc	20016
+item	90029	500000
+item	90027	500000
+item	30270	800000
+item	30774	25
+reward	88943	1
+allow_copy
+category	craft_roua
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	309	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	329	1
+allow_copy	309
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	319	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	339	1
+allow_copy	319
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	3229	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	3239	1
+allow_copy	3229
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	1189	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	1199	1
+allow_copy	1189
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	2209	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	2219	1
+allow_copy	2209
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	5169	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	5179	1
+allow_copy	5169
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	19299	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	19309	1
+allow_copy	19299
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	19499	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	19509	1
+allow_copy	19499
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	19699	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	19709	1
+allow_copy	19699
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end
+
+section
+"zodiac_antic"
+npc	20016
+item	19899	1
+item	30888	4
+item	30890	4
+item	90029	500000
+item	90027	500000
+reward	19909	1
+allow_copy	19899
+category	zodiac_antic
+percent	100
+gold	300000000000
+gaya	0
+end

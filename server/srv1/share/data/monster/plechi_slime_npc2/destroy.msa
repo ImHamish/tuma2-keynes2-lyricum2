@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc\plechi_slime_npc2\destroy.GR2"
+MotionDuration           3.333333
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.098516
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "slime_npc2"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/npc/slime_npc2_destroy.mse"
+        EffectPosition       0.000000 0.000000 50.000000
+    }
+}

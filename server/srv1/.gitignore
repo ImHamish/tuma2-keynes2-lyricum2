@@ -1,0 +1,10 @@
+# Do ignore: Folders
+auth1/
+auth2/
+auth3/
+auth4/
+auth5/
+auth6/
+chan/
+db/
+logs/

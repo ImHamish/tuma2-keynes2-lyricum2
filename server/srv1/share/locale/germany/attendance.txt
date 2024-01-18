@@ -1,0 +1,48 @@
+#
+# Title: Attendance Rewards
+# Description: Attend the game to collect daily rewards during the ongoing month.
+# Author: Owsap
+# Date: 2021.12.19 (YMD)
+#
+#	Group <MonthName>
+#	{
+#		Month	<Number>
+#		<DayNumber>	<ItemVNum>	<ItemCount>
+#	}
+#
+
+Group August
+{
+	Month	8
+	1	55401	1
+	2	55402	1
+	3	55403	1
+	4	55404	1
+	5	55405	1
+	6	55406	1
+	7	55407	1
+
+	8	55401	1
+	9	55401	1
+	10	55401	1
+	11	55401	1
+	12	55401	1
+	13	55401	1
+	14	55401	1
+
+	15	55401	1
+	16	55401	1
+	17	55401	1
+	18	55401	1
+	19	55401	1
+	20	55401	1
+	21	55401	1
+
+	22	55401	1
+	23	55401	3
+	24	55401	3
+	25	55401	1
+	26	55401	1
+	27	55401	1
+	28	55401	1
+}

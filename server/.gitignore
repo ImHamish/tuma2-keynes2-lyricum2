@@ -1,0 +1,6 @@
+# Do ignore: Types
+*.pyc
+*.list
+
+#Do ignore: Files
+ipfw.rules

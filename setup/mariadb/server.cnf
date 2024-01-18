@@ -1,0 +1,112 @@
+# Options specific to server applications, see
+# https://mariadb.com/kb/en/configuring-mariadb-with-option-files/#server-option-groups
+
+# Options specific to all server programs
+[server]
+
+# Options specific to MariaDB server programs
+[server-mariadb]
+
+#
+# Options for specific server tools
+#
+
+[mysqld]
+# Common
+user						= mysql
+#port						= 3306 # inherited from /usr/local/etc/mysql/my.cnf
+#socket						= /var/run/mysql/mysql.sock # inherited from /usr/local/etc/mysql/my.cnf
+#bind-address				= 127.0.0.1
+basedir						= /usr/local
+datadir						= /var/db/mysql
+net_retry_count				= 16384
+log_error					= /var/log/mysql/mysqld.err
+# Metin2
+local-infile				= 0
+slow-query-log				= 1
+slow-query-log-file			= /var/log/mysql/mysql-slow-query.log
+long-query-time				= 1
+tmp_table_size				= 128M
+max_heap_table_size			= 128M
+local-infile				= 0
+query_cache_limit			= 64M
+query_cache_size			= 64M
+query_cache_type			= 1
+thread_cache_size			= 512
+max_connections				= 100000
+max_connect_errors			= 100000
+interactive_timeout			= 900
+wait_timeout				= 900
+net_read_timeout			= 900
+net_write_timeout			= 1800
+connect_timeout				= 900
+join_buffer_size			= 16M
+key_buffer_size				= 16M
+max_allowed_packet			= 16M
+sort_buffer_size			= 2M
+read_buffer_size			= 2M
+myisam_sort_buffer_size		= 64M
+sql_mode					= ""
+
+# [mysqld] configuration for ZFS
+# From https://www.percona.com/resources/technical-presentations/zfs-mysql-percona-technical-webinar
+# Create separate datasets for data and logs, eg
+# zroot/mysql      compression=on recordsize=128k atime=off
+# zroot/mysql/data recordsize=16k
+# zroot/mysql/logs
+# datadir 			= /var/db/mysql/data
+# innodb_log_group_home_dir	= /var/db/mysql/log
+# audit_log_file		= /var/db/mysql/log/audit.log
+# general_log_file		= /var/db/mysql/log/general.log
+# log_bin			= /var/db/mysql/log/mysql-bin
+# relay_log			= /var/db/mysql/log/relay-log
+# slow_query_log_file		= /var/db/mysql/log/slow.log
+# innodb_doublewrite		= 0
+# innodb_flush_method		= O_DSYNC
+
+# Options read by `mariadb_safe`
+# Renamed from [mysqld_safe] starting with MariaDB 10.4.6.
+[mariadb-safe]
+# Metin2
+open_files_limit=100000
+
+# Options read my `mariabackup`
+[mariabackup]
+
+# Options read by `mysql_upgrade`
+# Renamed from [mysql_upgrade] starting with MariaDB 10.4.6.
+[mariadb-upgrade]
+
+# Specific options read by the mariabackup SST method
+[sst]
+
+# Options read by `mysqlbinlog`
+# Renamed from [mysqlbinlog] starting with MariaDB 10.4.6.
+[mariadb-binlog]
+
+# Options read by `mysqladmin`
+# Renamed from [mysqladmin] starting with MariaDB 10.4.6.
+[mariadb-admin]
+
+# Metin2
+[mysql]
+no-auto-rehash
+
+[mysqldump]
+quick
+max_allowed_packet=16M
+
+[isamchk]
+key_buffer=64M
+sort_buffer=64M
+read_buffer=16M
+write_buffer=16M
+
+[myisamchk]
+key_buffer=64M
+sort_buffer=64M
+read_buffer=16M
+write_buffer=16M
+
+[mysqlhotcopy]
+interactive-timeout

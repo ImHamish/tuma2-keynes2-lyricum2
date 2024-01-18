@@ -1,0 +1,5 @@
+# Do ignore: Folders
+data/
+
+# Do ignore: Types
+*.exe

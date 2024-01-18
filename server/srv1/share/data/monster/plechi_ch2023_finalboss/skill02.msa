@@ -1,0 +1,77 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\plechito_christmas2023\plechi_ch2023_finalboss\skill02.GR2"
+MotionDuration           3.066667
+Accumulation             0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     5
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "eff_weapon"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2023/boss_final_skill02_makingwp.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.00000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2023/boss_final_skill02_making_circle.mse"
+        EffectPosition       0.000000 -350.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.8700000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/christmas2023/boss_final_skill02_boom.mse"
+        EffectPosition       0.000000 -350.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      2
+        StartingTime         1.8700000
+        
+        DuringTime           0.200000
+        Power                140
+        AffectingRange       45000
+    }
+    Group Event04
+    {
+        MotionEventType      4
+        StartingTime         1.8700000
+        DuringTime          0.300000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        3
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 -350.000000 0.000000
+        }
+    }
+}

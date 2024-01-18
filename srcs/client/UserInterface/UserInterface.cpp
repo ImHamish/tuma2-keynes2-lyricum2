@@ -2,11 +2,7 @@
 #include "PythonApplication.h"
 #include "ProcessScanner.h"
 #include "resource.h"
-// #ifdef DISTRIBUTE
-#include <curl/curl.h>
-#include <curl/easy.h>
-#include <curl/curlbuild.h>
-// #endif
+
 #ifdef _DEBUG
 #include <crtdbg.h>
 #endif
@@ -69,9 +65,6 @@ FILE __iob_func[3] = { *stdin,*stdout,*stderr };
 #if defined(ENABLE_DISCORD_RPC)
 #pragma comment(lib, "discord-rpc.lib")
 #endif
-// #ifdef DISTRIBUTE
-#pragma comment (lib, "libcurl_a.lib")
-// #endif
 #if defined(__ENABLE_NEW_OFFLINESHOP__)
 #pragma comment(lib, "shlwapi.lib")
 #endif
@@ -123,18 +116,12 @@ std::vector<std::string> whiteMainListFiles = {
 	"d3d8.dll",
 //#ifdef USE_CRASH_RPT
     "crashrpt.dll",
-#ifndef DISTRIBUTE
     "crashrptd.dll",
-#endif
     "crashrptprobe.dll",
-#ifndef DISTRIBUTE
     "crashrptprobed.dll",
-#endif
     "crashrpt_lang.ini",
     "crashsender.exe",
-#ifndef DISTRIBUTE
     "crashsenderd.exe",
-#endif
 //#endif
 	"keynes2_patcher.exe",
 	"keynes2_patcher_new.exe",
@@ -216,17 +203,11 @@ static const char* ar_szMD5FileNames[][2] =
 
 //#ifdef USE_CRASH_RPT
     { "crashrpt.dll", "0ef113ac6f32d75d243fe73d9e31b845" },
-#ifndef DISTRIBUTE
     { "crashrptd.dll", "b8e6fc6c186432d7057494e233e714b6" },
-#endif
     { "crashrptprobe.dll", "6ff759ab6e8c377d24414423f0b48dcd" },
-#ifndef DISTRIBUTE
     { "crashrptprobed.dll", "758c424e215eaeb69a6f2ecc05223e7b" },
-#endif
     { "crashsender.exe", "d3786963bc6caf8775689fe87ed4654f" },
-#ifndef DISTRIBUTE
     { "crashsenderd.exe", "22fc9f72cdd6451e22f0a6c66b94125c" },
-#endif
 //#endif
 };
 
@@ -268,12 +249,10 @@ bool checkDir(const std::string szDirName)
 
 			if (isMiles) {
 				if (std::find(whiteMilesListFiles.begin(), whiteMilesListFiles.end(), sName.c_str()) == whiteMilesListFiles.end()) {
-					//MessageBoxA(NULL, sName.c_str(), "asd", MB_ICONSTOP);
 					wasEdited = true;
 				}
 			} else if (isMain) {
 				if (std::find(whiteMainListFiles.begin(), whiteMainListFiles.end(), sName.c_str()) == whiteMainListFiles.end()) {
-					//MessageBoxA(NULL, sName.c_str(), "asd", MB_ICONSTOP);
 					wasEdited = true;
 				}
 			}
@@ -300,7 +279,6 @@ void CheckFiles() {
 #if defined(DISTRIBUTE)
 	for (int i = 0; i < std::size(ar_szMD5FileNames); i++) {
 		if (strcmp(md5.digestFile((char*)ar_szMD5FileNames[i][0]), ar_szMD5FileNames[i][1])) {
-			//MessageBoxA(NULL, (char*)ar_szMD5FileNames[i][0], "asd", MB_ICONSTOP);
 			MessageBoxA(NULL, "The client has been modified, please run the autopatcher!", "keynes2", MB_ICONSTOP);
 			exit(0);
 		}
@@ -348,9 +326,7 @@ std::vector<std::wstring> packFiles = {
 	L"pack/patch1_d",
 	L"pack/patch2_d",
 	L"pack/stdlib",
-#if !defined(DISTRIBUTE)
 	L"pack/core",
-#endif
 };
 
 void PackUninitialize() {
@@ -554,44 +530,11 @@ bool Main(HINSTANCE hInstance, LPSTR lpCmdLine)
 	return ret;
 }
 
-// #ifdef DISTRIBUTE
-static std::wstring WURL = L"http://57.128.102.42:32511/auth.php";
-// #endif
-
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 #ifdef ENABLE_FILES_CHECK
     CheckFiles();
 #endif
-
-// #ifdef DISTRIBUTE
-    curl_global_init(CURL_GLOBAL_ALL);
-
-    CURL* curl = curl_easy_init();
-    if (curl)
-    {
-        std::wstring strUrl = WURL;
-        std::string url(strUrl.begin(), strUrl.end());
-
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        curl_easy_setopt(curl, CURLOPT_USERAGENT, "AdiuhbdjkbBNA");
-        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
-
-        CURLcode res = curl_easy_perform(curl);
-        if (res == CURLE_OK)
-        {
-            // all right
-        }
-        else
-        {
-            // may contact support
-        }
-
-        curl_easy_cleanup(curl);
-    }
-
-    curl_global_cleanup();
-// #endif
 
 #ifdef _DEBUG
 	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_CHECK_CRT_DF | _CRTDBG_LEAK_CHECK_DF );

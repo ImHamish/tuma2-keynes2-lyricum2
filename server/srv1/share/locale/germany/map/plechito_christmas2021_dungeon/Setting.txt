@@ -1,0 +1,12 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	4	4
+BasePosition	2252800	3046400
+TextureSet	textureset\plechito_christmas2021_dungeon.txt
+Environment	plechito_christmas2021_dungeon.msenv
+

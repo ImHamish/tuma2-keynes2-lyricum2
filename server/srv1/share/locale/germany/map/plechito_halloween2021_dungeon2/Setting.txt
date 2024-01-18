@@ -1,0 +1,12 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	4	4
+BasePosition	358400	51200
+TextureSet	textureset\plechito_halloween2021_dungeon.txt
+Environment	plechito_halloween2021_dungeon.msenv
+

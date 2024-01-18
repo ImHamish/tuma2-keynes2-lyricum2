@@ -1,0 +1,15 @@
+#√Ê±‚»Ø
+section
+	item_vnum	51002
+	apply_type	ENERGY
+	apply_value	8	6	6	8	10
+	apply_duration	1800	3600	1800	3600	7200
+end
+
+section
+	item_vnum	51003
+	apply_type	ENERGY
+	apply_value	10	10	10	10	10
+	apply_duration	86400000	86400000	86400000	86400000	86400000
+end
+

@@ -1,0 +1,34 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc2\plechito_christmas2023_pets\plechi_ch2023_pet7\run.GR2"
+MotionDuration           0.500000
+Accumulation             0.00	-265.35	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.380000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "D:/ymir work/npc2/plechito_christmas2023_pets/plechi_ch2023_pet7/ski_track.mse"
+        EffectPosition       8.000000 75.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.380000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "D:/ymir work/npc2/plechito_christmas2023_pets/plechi_ch2023_pet7/ski_track.mse"
+        EffectPosition       -8.000000 75.000000 0.000000
+    }
+}

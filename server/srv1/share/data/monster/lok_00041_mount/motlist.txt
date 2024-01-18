@@ -1,0 +1,5 @@
+GENERAL WAIT idle.msa 60
+GENERAL WAIT1 idle2.msa 40
+GENERAL RUN run.msa 100
+GENERAL WALK run.msa 100
+GENERAL DEAD dead.msa 100

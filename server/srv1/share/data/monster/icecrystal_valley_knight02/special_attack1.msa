@@ -1,0 +1,13 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\monster2\icecrystal_valley_knight02\normal_attack1.GR2"
+MotionDuration           1.000000
+
+Group LoopData
+{
+    MotionLoopCount          2
+    LoopCancelEnable         0
+    LoopStartTime            0.428224
+    LoopEndTime              0.712895
+}
+

@@ -1,0 +1,7 @@
+{
+	"hostname": "92.246.89.188",
+	"user": "protos",
+	"password": "pulamea",
+	"database": "player",
+	"port": 3306
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MapFolder>D:\keynes2-project\tools\FoxFSArchiver\source\map\plechito_christmas2021_dungeon</MapFolder>
+  <InformationFolder />
+  <Remember>true</Remember>
+  <LatestCoordinateZ>0</LatestCoordinateZ>
+  <LatestXVar>10</LatestXVar>
+  <LatestYVar>10</LatestYVar>
+  <LatestDirection>4</LatestDirection>
+  <LatestRespawnTime>15</LatestRespawnTime>
+  <LatestCount>1</LatestCount>
+  <LatestVnum>8063</LatestVnum>
+  <LatestCharType>3</LatestCharType>
+  <LatestSpawnChance>100</LatestSpawnChance>
+</Settings>
