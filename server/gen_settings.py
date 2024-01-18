@@ -21,7 +21,7 @@ elif v_system=="Windows":
 
 v_adminPagePassword='AFSJ423JnkLALJKA'						#adminpage_password
 v_serverHostname='127.0.0.1'								#host for sql connections
-v_serverUserPass='keynes2user k22@!pass'					#user&pwd for sql connection
+v_serverUserPass='mt2!user @mt2!pass'						#user&pwd for sql connection
 v_serverData="%s %s" % (v_serverHostname, v_serverUserPass)	#host, user and pwd for db sql connections
 v_dbHostname='127.0.0.1'									#default hostname for db
 v_dbPort=30051												#default port for db (the others will be automatically calculated)

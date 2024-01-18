@@ -1,5 +1,5 @@
 <ScriptFile>
-	<CreateEterPackXml Input="source/core" ArchivePath="../../client/pack/core" XmlPath="xml/core_create.xml">
+	<CreateEterPackXml Input="source/root" ArchivePath="../../client/pack/root" XmlPath="xml/root_create.xml">
 		<Ignore Pattern="*.psd" />
 		<Ignore Pattern="*.uas" />
 		<Ignore Pattern="*.pdn" />
