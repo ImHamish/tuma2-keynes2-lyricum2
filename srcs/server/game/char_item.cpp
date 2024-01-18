@@ -13310,6 +13310,12 @@ void CHARACTER::MultipleOpening(TItemPos pos, uint32_t count)
         count = 500;
     }
 
+    if (pItem->GetType() == ITEM_GACHA)
+    {
+        // code it
+        return;
+    }
+
     pItem->Lock(true);
 
     if (pItem->GetCount() < count)
@@ -13320,14 +13326,8 @@ void CHARACTER::MultipleOpening(TItemPos pos, uint32_t count)
     const auto itemType = pItem->GetType();
     if (itemType == ITEM_GACHA)
     {
-        const auto lcount = pItem->GetSocket(0);
-        if (lcount == 0)
-        {
-            pItem->Lock(false);
-            return;
-        }
-
-        count *= lcount;
+        // code it
+        return;
     }
 
     const uint32_t count2 = count;

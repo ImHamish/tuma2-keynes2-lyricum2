@@ -73,11 +73,7 @@ void CInputAuth::Login(LPDESC d, const char * c_pData)
 #ifdef ENABLE_MULTI_LANGUAGE
     if (!pinfo->lang || pinfo->lang >= LANGUAGE_MAX_NUM)
     {
-#ifdef ENABLE_FILES_CHECK
-        LoginFailure(d, "UPDATE");
-#else
         LoginFailure(d, "SHUTDOWN");
-#endif
         return;
     }
 #endif
@@ -109,13 +105,7 @@ void CInputAuth::Login(LPDESC d, const char * c_pData)
 	char passwd[PASSWD_MAX_LEN + 1];
 	strlcpy(passwd, pinfo->passwd, sizeof(passwd));
 
-#if defined(ENABLE_FILES_CHECK)
-	char keyMD5[128 + 1];
-	strlcpy(keyMD5, pinfo->key, sizeof(keyMD5));
-	sys_log(0, "InputAuth::Login : %s(%d) desc %p binaryMD5 (%s)", login, strlen(login), get_pointer(d), keyMD5);
-#else
 	sys_log(0, "InputAuth::Login : %s(%d) desc %p", login, strlen(login), get_pointer(d));
-#endif
 
 	// check login string
 	if (false == FN_IS_VALID_LOGIN_STRING(login))
@@ -135,15 +125,6 @@ void CInputAuth::Login(LPDESC d, const char * c_pData)
 		d->Packet(&failurePacket, sizeof(failurePacket));
 		return;
 	}
-
-#if defined(ENABLE_FILES_CHECK)
-	char szKeyMD5[128 * 2 + 1];
-	DBManager::instance().EscapeString(szKeyMD5, sizeof(szKeyMD5), keyMD5, strlen(keyMD5));
-	if (m_binaryMD5.compare(szKeyMD5)) {
-		LoginFailure(d, "UPDATE");
-		return;
-	}
-#endif
 
 #ifdef ENABLE_ANTI_LOGIN_BRUTEFORCE
 	if (!DESC_MANAGER::instance().LoginCheckByLogin(login))

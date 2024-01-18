@@ -12,9 +12,7 @@ enum ItemDestroyTime {ITEM_DESTROY_TIME_AUTOGIVE, ITEM_DESTROY_TIME_DROPITEM, IT
 void config_init(const std::string& st_localeServiceName); // default "" is CONFIG
 
 extern char sql_addr[256];
-#if defined(ENABLE_FILES_CHECK)
-extern std::string m_binaryMD5;
-#endif
+
 extern WORD mother_port;
 extern WORD p2p_port;
 

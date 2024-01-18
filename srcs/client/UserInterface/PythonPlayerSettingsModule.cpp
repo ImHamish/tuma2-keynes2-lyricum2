@@ -652,7 +652,7 @@ void initPlayerSettingsModule()
 		[pkRaceManager](const char* c_szName, const char* c_szSrcName) { pkRaceManager->RegisterRaceSrcName(c_szName, c_szSrcName); },
 		CInstanceBase::SetDustGap,
 		CInstanceBase::SetHorseDustGap,
-		CInstanceBase::RegisterEffectNormal,
+		CInstanceBase::RegisterEffect,
 		TraceErrorHandler);
 	
 	PythonPlayerSettingsModuleLibRegisterVariables(m_vecPassiveGuildSkillIndex, m_vecActiveGuildSkillIndex,

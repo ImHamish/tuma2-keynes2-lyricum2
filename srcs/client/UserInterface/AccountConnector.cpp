@@ -1,7 +1,4 @@
 #include "StdAfx.h"
-#if defined(ENABLE_FILES_CHECK)
-#include "Resource.h"
-#endif
 #include "AccountConnector.h"
 #include "Packet.h"
 #include "PythonNetworkStream.h"
@@ -19,11 +16,6 @@
 extern DWORD g_adwEncryptKey[4];
 extern DWORD g_adwDecryptKey[4];
 // END_OF_CHINA_CRYPT_KEY
-
-#if defined(ENABLE_FILES_CHECK)
-extern std::string m_binaryMD5;
-static std::string cmp2 = "UPDATE";
-#endif
 
 void CAccountConnector::SetHandler(PyObject* poHandler)
 {
@@ -179,14 +171,10 @@ bool CAccountConnector::__AuthState_RecvPhase()
 
 		strncpy(LoginPacket.name, m_strID.c_str(), LOGIN_MAX_LEN);
 		strncpy(LoginPacket.pwd, m_strPassword.c_str(), PASSWD_MAX_LEN);
-#if defined(ENABLE_FILES_CHECK)
-		strncpy(LoginPacket.key, m_binaryMD5.c_str(), 128);
-#endif
+
 		LoginPacket.name[LOGIN_MAX_LEN] = '\0';
 		LoginPacket.pwd[PASSWD_MAX_LEN] = '\0';
-#if defined(ENABLE_FILES_CHECK)
-		LoginPacket.key[128] = '\0';
-#endif
+
 #ifdef ENABLE_MULTI_LANGUAGE
         LoginPacket.lang = LocaleService_GetLocaleNum();
 #endif
@@ -344,23 +332,10 @@ bool CAccountConnector::__AuthState_RecvAuthFailure()
 	if (!Recv(sizeof(TPacketGCLoginFailure), &packet_failure))
 		return false;
 
-#if defined(ENABLE_FILES_CHECK) && defined(DISTRIBUTE)
-	if (!cmp2.compare(packet_failure.szStatus)) {
-		MessageBoxA(NULL, "The client has been modified, please run the autopatcher!", "Keynes2", MB_ICONSTOP);
-		PostQuitMessage(0);
-		return true;
-	} else {
-		if (m_poHandler)
-			PyCallClassMemberFunc(m_poHandler, "OnLoginFailure", Py_BuildValue("(s)", packet_failure.szStatus));
-
-		return true;
-	}
-#else
 	if (m_poHandler)
 		PyCallClassMemberFunc(m_poHandler, "OnLoginFailure", Py_BuildValue("(s)", packet_failure.szStatus));
 
 	return true;
-#endif
 }
 
 #ifdef _IMPROVED_PACKET_ENCRYPTION_

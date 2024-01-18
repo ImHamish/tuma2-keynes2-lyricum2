@@ -81,37 +81,31 @@ M2CONFIG_SRV1 = {
 			("AUTH_SERVER: %s", ("master")),
 			("PLAYER_SQL: %s %s %d", (v_serverData, M2SD_SRV1["account"], v_mysqlport)),
 			("define_client_version: %s", ("523759847")),
-			("BINARY_MD5: %s", ("7b575eaca5d413a35966f21eea9a93d4")),
 		),
 		M2TYPE.AUTH2: (
 			("AUTH_SERVER: %s", ("master")),
 			("PLAYER_SQL: %s %s %d", (v_serverData, M2SD_SRV1["account"], v_mysqlport)),
 			("define_client_version: %s", ("523759847")),
-			("BINARY_MD5: %s", ("7b575eaca5d413a35966f21eea9a93d4")),
 		),
 		M2TYPE.AUTH3: (
 			("AUTH_SERVER: %s", ("master")),
 			("PLAYER_SQL: %s %s %d", (v_serverData, M2SD_SRV1["account"], v_mysqlport)),
 			("define_client_version: %s", ("523759847")),
-			("BINARY_MD5: %s", ("7b575eaca5d413a35966f21eea9a93d4")),
 		),
 		M2TYPE.AUTH4: (
 			("AUTH_SERVER: %s", ("master")),
 			("PLAYER_SQL: %s %s %d", (v_serverData, M2SD_SRV1["account"], v_mysqlport)),
 			("define_client_version: %s", ("523759847")),
-			("BINARY_MD5: %s", ("7b575eaca5d413a35966f21eea9a93d4")),
 		),
 		M2TYPE.AUTH5: (
 			("AUTH_SERVER: %s", ("master")),
 			("PLAYER_SQL: %s %s %d", (v_serverData, M2SD_SRV1["account"], v_mysqlport)),
 			("define_client_version: %s", ("523759847")),
-			("BINARY_MD5: %s", ("7b575eaca5d413a35966f21eea9a93d4")),
 		),
 		M2TYPE.AUTH6: (
 			("AUTH_SERVER: %s", ("master")),
 			("PLAYER_SQL: %s %s %d", (v_serverData, M2SD_SRV1["account"], v_mysqlport)),
 			("define_client_version: %s", ("523759847")),
-			("BINARY_MD5: %s", ("7b575eaca5d413a35966f21eea9a93d4")),
 		),
 		M2TYPE.CORE: (
 			("PLAYER_SQL: %s %s %d", (v_serverData, M2SD_SRV1["player"], v_mysqlport)),

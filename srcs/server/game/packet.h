@@ -644,9 +644,6 @@ typedef struct command_login3
 #ifdef ENABLE_HWID
 	char hwid[HWID_LENGTH + 1];
 #endif
-#if defined(ENABLE_FILES_CHECK)
-	char key[128 + 1];
-#endif
 #if defined(ENABLE_NEW_ANTICHEAT_RULES)
 	uint32_t loginHash;
 #endif

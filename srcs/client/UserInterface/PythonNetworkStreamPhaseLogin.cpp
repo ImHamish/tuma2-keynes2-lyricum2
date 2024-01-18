@@ -1,16 +1,9 @@
 #include "StdAfx.h"
-#if defined(ENABLE_FILES_CHECK)
-#include "Resource.h"
-#endif
+
 #include "PythonNetworkStream.h"
 #include "Packet.h"
 #include "Test.h"
 #include "AccountConnector.h"
-
-#if defined(ENABLE_FILES_CHECK)
-static std::string cmp1 = "UPDATE";
-extern std::string m_binaryMD5;
-#endif
 
 // Login ---------------------------------------------------------------------------
 void CPythonNetworkStream::LoginPhase()
@@ -201,18 +194,9 @@ bool CPythonNetworkStream::__RecvLoginFailurePacket()
 	if (!Recv(sizeof(TPacketGCLoginFailure), &packet_failure))
 		return false;
 
-#if defined(ENABLE_FILES_CHECK)
-	if (!cmp1.compare(packet_failure.szStatus)) {
-		MessageBoxA(NULL, "The client has been modified, please run the autopatcher!", "Keynes2", MB_ICONSTOP);
-		exit(0);
-	} else {
-#endif
 	PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_LOGIN], "OnLoginFailure", Py_BuildValue("(s)", packet_failure.szStatus));
 #ifdef _DEBUG
 	Tracef(" RecvLoginFailurePacket : [%s]\n", packet_failure.szStatus);
-#endif
-#if defined(ENABLE_FILES_CHECK)
-	}
 #endif
 	return true;
 }

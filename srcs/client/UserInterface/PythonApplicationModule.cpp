@@ -10,9 +10,6 @@
 #ifdef ENABLE_MULTI_LANGUAGE
 #include "shellapi.h"
 #endif
-#if defined(ENABLE_FILES_CHECK) && defined(DISTRIBUTE)
-extern bool m_filesChecked = false;
-#endif
 
 extern bool PERF_CHECKER_RENDER_GAME;
 extern D3DXCOLOR g_fSpecularColor;
@@ -404,13 +401,6 @@ PyObject* appCreate(PyObject* poSelf, PyObject* poArgs)
 	if (!app.Create(poSelf, szName, width, height, Windowed)) {
 		return NULL;
 	}
-
-#if defined(ENABLE_FILES_CHECK) && defined(DISTRIBUTE)
-	if (!m_filesChecked) {
-		MessageBoxA(NULL, "The client has been modified, please run the autopatcher!", "Keynes2", MB_ICONSTOP);
-		exit(0);
-	}
-#endif
 
 #if defined(ENABLE_CLIENT_OPTIMIZATION)
 	LoadPythonPlayerSettingsModuleLibrary("Metin2Release.exe");

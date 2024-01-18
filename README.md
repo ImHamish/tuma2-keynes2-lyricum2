@@ -57,3 +57,22 @@ gmake
 cd /tuma2-keynes2-lyricum2/server
 
 sh admin_panel.sh
+
+## Client: setup
+Download & Install Git & VS2022
+
+Clone the project.
+
+Run: srcs\create_vs_project.bat
+
+Run: srcs\build_client_distribute.bat
+
+Open: srcs\build\keynes2.sln
+
+Set: Distribute
+
+Compile: all the tools
+
+Run: tools\FoxFSArchiver\create_all.bat
+
+Copy: all the files from client-cfg folder to client folder

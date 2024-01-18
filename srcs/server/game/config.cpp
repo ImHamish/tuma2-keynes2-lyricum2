@@ -23,9 +23,7 @@
 #include "skill_power.h"
 
 using std::string;
-#if defined(ENABLE_FILES_CHECK)
-string m_binaryMD5 = "notdefined";
-#endif
+
 BYTE	g_bChannel = 0;
 bool g_bMoveSpeedMapLimit = true;
 WORD	mother_port = 50080;
@@ -1052,15 +1050,6 @@ static bool __LoadGeneralConfigFile(const char* configName)
 			fprintf(stdout, "CHECK_VERSION_VALUE: %s\n", g_stClientVersion.c_str());
 			continue;
 		}
-
-#if defined(ENABLE_FILES_CHECK)
-		TOKEN("BINARY_MD5")
-		{
-			m_binaryMD5 = value_string;
-			fprintf(stdout, "BINARY_MD5: %s\n", m_binaryMD5.c_str());
-			continue;
-		}
-#endif
 
 		TOKEN("gm_host_check")
 		{
