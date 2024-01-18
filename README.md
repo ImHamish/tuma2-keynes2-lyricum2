@@ -48,7 +48,7 @@ quit
 
 cd /tuma2-keynes2-lyricum2/srcs
 
-sh build_release.sh
+sh build_distribute.sh
 
 cd /tuma2-keynes2-lyricum2/setup
 

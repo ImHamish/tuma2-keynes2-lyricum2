@@ -185,9 +185,9 @@ def genInitSrv(szSvr):
 					#"share/bin/game"):
 		TouchFile("%s/%s" % (szSvr, val1))
 	
-	SymLinkCreateFileExe("../../../../srcs/bin/db_x86_Release", "%s/share/bin/db" % (szSvr))
-	SymLinkCreateFileExe("../../../../srcs/bin/game_x86_Release", "%s/share/bin/game" % (szSvr))
-	SymLinkCreateFileExe("../../../../../../srcs/bin/qc_x86_Release", "%s/share/locale/germany/quest/qc" % (szSvr))
+	SymLinkCreateFileExe("../../../../srcs/bin/db_x86_Distribute", "%s/share/bin/db" % (szSvr))
+	SymLinkCreateFileExe("../../../../srcs/bin/game_x86_Distribute", "%s/share/bin/game" % (szSvr))
+	SymLinkCreateFileExe("../../../../../../srcs/bin/qc_x86_Distribute", "%s/share/locale/germany/quest/qc" % (szSvr))
 
 #global single server rules
 genConfig = {}
