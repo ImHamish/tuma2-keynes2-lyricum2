@@ -1,0 +1,26 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc\plechito_christmas2019\plechi_ch2019_santa\go_away.GR2"
+MotionDuration           3.166667
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         2.906667
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01-Spine"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/npc/ch2019_santa_gone.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      8
+        StartingTime         3.066667
+    }
+}

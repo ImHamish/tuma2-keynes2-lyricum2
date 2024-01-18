@@ -1,0 +1,3 @@
+GENERAL WAIT wait.msa 20
+GENERAL WAIT1 wait1.msa 80
+GENERAL RUN run.msa 100

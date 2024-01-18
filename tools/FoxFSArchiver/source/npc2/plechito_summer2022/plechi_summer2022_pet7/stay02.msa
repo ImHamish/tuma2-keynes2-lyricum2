@@ -1,0 +1,56 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc2\plechito_summer2022\plechi_summer2022_pet7\stay02.GR2"
+MotionDuration           3.833333
+Accumulation             0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     5 
+    Group Event00
+    {
+        MotionEventType      8
+        StartingTime         0.3850000
+    }
+    Group Event01
+    {
+        MotionEventType      7
+        StartingTime         0.760000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.380000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/npc2/plechito_summer2022/plechi_summer2022_pet7/stay02_eff.mse"
+        EffectPosition       0.000000 0.000000 40.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.720000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/npc2/plechito_summer2022/plechi_summer2022_pet7/stay02_eff.mse"
+        EffectPosition       140.000000 60.000000 40.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.750000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "grouned_eff"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/npc2/plechito_summer2022/plechi_summer2022_pet7/stay02_effground.mse"
+        EffectPosition       0.000000 0.000000 5.000000
+    }
+}

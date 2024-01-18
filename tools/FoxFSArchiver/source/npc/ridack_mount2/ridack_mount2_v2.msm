@@ -1,0 +1,60 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:/ymir work/npc/ridack_mount2/ridack_buffalo.GR2"
+
+Group ShapeData
+{
+    PathName 		 "d:/ymir work/npc/ridack_mount2/"
+    ShapeDataCount 		 1
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"ridack_buffalo.GR2"
+		SourceSkin			"ridack_buffalo.dds"
+		TargetSkin			"ridack_buffaloV2.dds"
+		SourceSkin2			"ridack_buffalo2.dds"
+		TargetSkin2			"ridack_buffalo2V2.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "horse_bip01"
+        
+        CollisionType        0
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           100.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "horse_bip01"
+        
+        CollisionType        0
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           121.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

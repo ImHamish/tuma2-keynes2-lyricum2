@@ -1,0 +1,18 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc\Drayen_Mount_53\Drayen_Mount_53.GR2"
+
+Group ShapeData
+{
+    PathName 		 "d:/ymir work/npc/Drayen_Mount_53/"
+    ShapeDataCount 		 1
+	Group ShapeData00
+	Specular            100	
+	{
+		ShapeIndex			0
+
+		Model				"Drayen_Mount_53.GR2"
+		SourceSkin			"Drayen_Mount_53.tga"
+		TargetSkin			"Drayen_Mount_53.tga"		
+	}
+}

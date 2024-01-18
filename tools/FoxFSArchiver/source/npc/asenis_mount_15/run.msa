@@ -1,0 +1,5 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc\Asenis_Mount_15\run.GR2"
+MotionDuration           0.800000
+Accumulation             0.00    -1000.000000    0.00

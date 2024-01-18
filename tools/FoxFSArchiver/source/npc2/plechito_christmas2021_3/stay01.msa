@@ -1,0 +1,60 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc2\plechito_christmas2021_3\stay01.GR2"
+MotionDuration           3.666667
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      8
+        StartingTime         0.150000
+    }
+    Group Event01
+    {
+        MotionEventType      7
+        StartingTime         0.420000
+    }
+    Group Event02
+    {
+        MotionEventType      9
+        StartingTime         0.2000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.160000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/npc2/plechito_christmas2021/plechi_ch2021_pet2/stay01_eff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.400000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/npc2/plechito_christmas2021/plechi_ch2021_pet2/stay01_eff.mse"
+        EffectPosition       -70.000000 350.000000 130.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.410000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bottom_effect"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/npc2/plechito_christmas2021/plechi_ch2021_pet2/stay01_eff2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

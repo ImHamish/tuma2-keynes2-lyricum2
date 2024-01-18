@@ -1,0 +1,14 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc\plechito_halloween2021\plechi_h2021_npc2\dead.GR2"
+MotionDuration           1.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      8
+        StartingTime         0.0000000
+    }
+}
