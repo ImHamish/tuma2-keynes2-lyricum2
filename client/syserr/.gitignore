@@ -1,6 +1,0 @@
-# Do ignore: All
-*
-!.gitignore
-
-# Do not ignore: Folder
-!crash/
